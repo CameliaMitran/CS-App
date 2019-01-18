@@ -1,0 +1,28 @@
+C:\Users\Alexandru\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\ContentShare.csprojAssemblyReference.cache
+C:\Users\Alexandru\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\ContentShare.csproj.GenerateResource.cache
+C:\Users\Alexandru\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\ContentShare.csproj.CoreCompileInputs.cache
+C:\Users\Alexandru\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Login.resources
+C:\Users\Alexandru\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Content Share.exe.config
+C:\Users\Alexandru\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Content Share.exe
+C:\Users\Alexandru\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Content Share.pdb
+C:\Users\Alexandru\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\ContentShare.Properties.Resources.resources
+C:\Users\Alexandru\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\Content Share.exe
+C:\Users\Alexandru\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\Content Share.pdb
+C:\Users\Alexandru\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.CSapp.resources
+C:\Users\Alexandru\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\ContentShare.TicketsForm1.resources
+C:\Users\costinel.lazar\Downloads\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Content Share.exe.config
+C:\Users\costinel.lazar\Downloads\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Content Share.exe
+C:\Users\costinel.lazar\Downloads\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Content Share.pdb
+C:\Users\costinel.lazar\Downloads\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\ContentShare.csprojAssemblyReference.cache
+C:\Users\costinel.lazar\Downloads\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.CSapp.resources
+C:\Users\costinel.lazar\Downloads\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Login.resources
+C:\Users\costinel.lazar\Downloads\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\ContentShare.Properties.Resources.resources
+C:\Users\costinel.lazar\Downloads\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\ContentShare.TicketsForm1.resources
+C:\Users\costinel.lazar\Downloads\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\ContentShare.csproj.GenerateResource.cache
+C:\Users\costinel.lazar\Downloads\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\ContentShare.csproj.CoreCompileInputs.cache
+C:\Users\costinel.lazar\Downloads\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\Content Share.exe
+C:\Users\costinel.lazar\Downloads\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\Content Share.pdb
+C:\Users\costinel.lazar\Downloads\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\ContentShare.CreateTickets.resources
+C:\Users\costinel.lazar\Downloads\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\ContentShare.Contact.resources
+C:\Users\costinel.lazar\Downloads\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\ContentShare.Upload.resources
+C:\Users\costinel.lazar\Downloads\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\ContentShare.SignUp.resources
