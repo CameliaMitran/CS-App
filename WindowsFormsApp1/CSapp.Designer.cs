@@ -35,19 +35,18 @@
             this.btnCreate = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panelHeader = new System.Windows.Forms.Panel();
+            this.labelExit = new System.Windows.Forms.Label();
             this.panelDesplay = new System.Windows.Forms.Panel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.labelExit = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.panelHeader.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnTickets
             // 
-            this.btnTickets.Location = new System.Drawing.Point(76, 195);
-            this.btnTickets.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnTickets.Location = new System.Drawing.Point(51, 127);
             this.btnTickets.Name = "btnTickets";
-            this.btnTickets.Size = new System.Drawing.Size(112, 35);
+            this.btnTickets.Size = new System.Drawing.Size(75, 23);
             this.btnTickets.TabIndex = 0;
             this.btnTickets.Text = "Tickets";
             this.btnTickets.UseVisualStyleBackColor = true;
@@ -55,10 +54,9 @@
             // 
             // btnUpload
             // 
-            this.btnUpload.Location = new System.Drawing.Point(76, 285);
-            this.btnUpload.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnUpload.Location = new System.Drawing.Point(51, 185);
             this.btnUpload.Name = "btnUpload";
-            this.btnUpload.Size = new System.Drawing.Size(112, 35);
+            this.btnUpload.Size = new System.Drawing.Size(75, 23);
             this.btnUpload.TabIndex = 1;
             this.btnUpload.Text = "Upload";
             this.btnUpload.UseVisualStyleBackColor = true;
@@ -66,10 +64,9 @@
             // 
             // btnContact
             // 
-            this.btnContact.Location = new System.Drawing.Point(76, 385);
-            this.btnContact.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnContact.Location = new System.Drawing.Point(51, 250);
             this.btnContact.Name = "btnContact";
-            this.btnContact.Size = new System.Drawing.Size(112, 35);
+            this.btnContact.Size = new System.Drawing.Size(75, 23);
             this.btnContact.TabIndex = 2;
             this.btnContact.Text = "Contact";
             this.btnContact.UseVisualStyleBackColor = true;
@@ -85,15 +82,18 @@
             this.panelMenu.Controls.Add(this.btnUpload);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(304, 692);
+            this.panelMenu.Size = new System.Drawing.Size(203, 450);
             this.panelMenu.TabIndex = 3;
+            this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint);
             // 
             // btnCreate
             // 
-            this.btnCreate.Location = new System.Drawing.Point(76, 460);
+            this.btnCreate.Location = new System.Drawing.Point(51, 299);
+            this.btnCreate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(112, 32);
+            this.btnCreate.Size = new System.Drawing.Size(75, 21);
             this.btnCreate.TabIndex = 3;
             this.btnCreate.Text = "Create ";
             this.btnCreate.UseVisualStyleBackColor = true;
@@ -105,8 +105,9 @@
             this.panelLogo.BackgroundImage = global::ContentShare.Properties.Resources.multimedia;
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(304, 100);
+            this.panelLogo.Size = new System.Drawing.Size(203, 65);
             this.panelLogo.TabIndex = 0;
             // 
             // panelHeader
@@ -114,42 +115,44 @@
             this.panelHeader.BackColor = System.Drawing.SystemColors.Control;
             this.panelHeader.Controls.Add(this.labelExit);
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelHeader.Location = new System.Drawing.Point(304, 0);
+            this.panelHeader.Location = new System.Drawing.Point(203, 0);
+            this.panelHeader.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(896, 100);
+            this.panelHeader.Size = new System.Drawing.Size(597, 65);
             this.panelHeader.TabIndex = 4;
-            // 
-            // panelDesplay
-            // 
-            this.panelDesplay.BackColor = System.Drawing.Color.White;
-            this.panelDesplay.Location = new System.Drawing.Point(304, 100);
-            this.panelDesplay.Name = "panelDesplay";
-            this.panelDesplay.Size = new System.Drawing.Size(896, 592);
-            this.panelDesplay.TabIndex = 5;
             // 
             // labelExit
             // 
             this.labelExit.AutoSize = true;
             this.labelExit.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelExit.Location = new System.Drawing.Point(849, 9);
+            this.labelExit.Location = new System.Drawing.Point(566, 6);
+            this.labelExit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelExit.Name = "labelExit";
-            this.labelExit.Size = new System.Drawing.Size(37, 34);
+            this.labelExit.Size = new System.Drawing.Size(27, 26);
             this.labelExit.TabIndex = 4;
             this.labelExit.Text = "X";
             this.labelExit.Click += new System.EventHandler(this.labelExit_Click);
             // 
+            // panelDesplay
+            // 
+            this.panelDesplay.BackColor = System.Drawing.Color.White;
+            this.panelDesplay.Location = new System.Drawing.Point(203, 65);
+            this.panelDesplay.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelDesplay.Name = "panelDesplay";
+            this.panelDesplay.Size = new System.Drawing.Size(597, 385);
+            this.panelDesplay.TabIndex = 5;
+            // 
             // CSapp
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panelDesplay);
             this.Controls.Add(this.panelHeader);
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "CSapp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CSapp";

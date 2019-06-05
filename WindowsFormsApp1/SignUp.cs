@@ -39,5 +39,20 @@ namespace ContentShare
             Login login = new Login();
             login.Show();
         }
+
+        private void labelSingup_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labeUserName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

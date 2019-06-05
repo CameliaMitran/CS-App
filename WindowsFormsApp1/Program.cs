@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ContentShare;
+using Oracle.DataAccess;
 namespace WindowsFormsApp1
 {
     public class Constanta

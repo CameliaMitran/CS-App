@@ -35,11 +35,11 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.linkSignup = new System.Windows.Forms.LinkLabel();
             this.labelExit = new System.Windows.Forms.Label();
+            this.linkSignup = new System.Windows.Forms.LinkLabel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -91,24 +91,12 @@
             resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
             // 
-            // label1
+            // labelExit
             // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.BackColor = System.Drawing.SystemColors.Control;
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label1.Name = "label1";
-            // 
-            // label2
-            // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label2.Name = "label2";
-            // 
-            // label3
-            // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label3.Name = "label3";
+            resources.ApplyResources(this.labelExit, "labelExit");
+            this.labelExit.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelExit.Name = "labelExit";
+            this.labelExit.Click += new System.EventHandler(this.labelExit_Click);
             // 
             // linkSignup
             // 
@@ -117,12 +105,24 @@
             this.linkSignup.TabStop = true;
             this.linkSignup.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkSingup_LinkClicked);
             // 
-            // labelExit
+            // label3
             // 
-            resources.ApplyResources(this.labelExit, "labelExit");
-            this.labelExit.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.labelExit.Name = "labelExit";
-            this.labelExit.Click += new System.EventHandler(this.labelExit_Click);
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.label3.Name = "label3";
+            // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.label2.Name = "label2";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.BackColor = System.Drawing.SystemColors.Control;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.label1.Name = "label1";
             // 
             // Login
             // 

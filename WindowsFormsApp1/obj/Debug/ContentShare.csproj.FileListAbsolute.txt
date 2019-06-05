@@ -26,3 +26,22 @@ C:\Users\costinel.lazar\Downloads\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\Co
 C:\Users\costinel.lazar\Downloads\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\ContentShare.Contact.resources
 C:\Users\costinel.lazar\Downloads\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\ContentShare.Upload.resources
 C:\Users\costinel.lazar\Downloads\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\ContentShare.SignUp.resources
+C:\Users\Alexandru\Source\Repos\CameliaMitran\CS-App\WindowsFormsApp1\bin\Debug\Content Share.exe.config
+C:\Users\Alexandru\Source\Repos\CameliaMitran\CS-App\WindowsFormsApp1\bin\Debug\Content Share.exe
+C:\Users\Alexandru\Source\Repos\CameliaMitran\CS-App\WindowsFormsApp1\bin\Debug\Content Share.pdb
+C:\Users\Alexandru\Source\Repos\CameliaMitran\CS-App\WindowsFormsApp1\obj\Debug\ContentShare.csprojAssemblyReference.cache
+C:\Users\Alexandru\Source\Repos\CameliaMitran\CS-App\WindowsFormsApp1\obj\Debug\ContentShare.Contact.resources
+C:\Users\Alexandru\Source\Repos\CameliaMitran\CS-App\WindowsFormsApp1\obj\Debug\ContentShare.CreateTickets.resources
+C:\Users\Alexandru\Source\Repos\CameliaMitran\CS-App\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.CSapp.resources
+C:\Users\Alexandru\Source\Repos\CameliaMitran\CS-App\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Login.resources
+C:\Users\Alexandru\Source\Repos\CameliaMitran\CS-App\WindowsFormsApp1\obj\Debug\ContentShare.Properties.Resources.resources
+C:\Users\Alexandru\Source\Repos\CameliaMitran\CS-App\WindowsFormsApp1\obj\Debug\ContentShare.SignUp.resources
+C:\Users\Alexandru\Source\Repos\CameliaMitran\CS-App\WindowsFormsApp1\obj\Debug\ContentShare.TicketsForm1.resources
+C:\Users\Alexandru\Source\Repos\CameliaMitran\CS-App\WindowsFormsApp1\obj\Debug\ContentShare.Upload.resources
+C:\Users\Alexandru\Source\Repos\CameliaMitran\CS-App\WindowsFormsApp1\obj\Debug\ContentShare.csproj.GenerateResource.cache
+C:\Users\Alexandru\Source\Repos\CameliaMitran\CS-App\WindowsFormsApp1\obj\Debug\ContentShare.csproj.CoreCompileInputs.cache
+C:\Users\Alexandru\Source\Repos\CameliaMitran\CS-App\WindowsFormsApp1\obj\Debug\Content Share.exe
+C:\Users\Alexandru\Source\Repos\CameliaMitran\CS-App\WindowsFormsApp1\obj\Debug\Content Share.pdb
+C:\Users\Alexandru\source\repos\CameliaMitran\CS-App\WindowsFormsApp1\obj\Debug\ContentShare.csproj.CopyComplete
+C:\Users\Alexandru\source\repos\CameliaMitran\CS-App\WindowsFormsApp1\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\Alexandru\source\repos\CameliaMitran\CS-App\WindowsFormsApp1\bin\Debug\Oracle.DataAccess.dll

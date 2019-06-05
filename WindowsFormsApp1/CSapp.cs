@@ -71,5 +71,10 @@ namespace WindowsFormsApp1
         {
             this.Close();
         }
+
+        private void panelMenu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
