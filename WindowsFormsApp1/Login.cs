@@ -30,8 +30,9 @@ namespace WindowsFormsApp1
         //conectarea la baza de date, loginul facut in functie de departamentul la care lucreaza un angajat
         /*https://www.youtube.com/watch?v=QrsZ4DPCgpg
          * https://www.c-sharpcorner.com/article/login-form-in-c-sharp-connected-with-database-for/
+         * https://www.youtube.com/watch?v=N9uX-0CnLu4
          */
-
+         //conectarea la baza de date
         OracleConnection connection = new OracleConnection("DATA SOURCE=DESKTOP-Q1DI1IT:1521/XE;PERSIST SECURITY INFO=True; PASSWORD = cami; USER ID=CAMI");
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -40,48 +41,52 @@ namespace WindowsFormsApp1
             cmd.Parameters.Add(":username", userName.Text);
             cmd.Parameters.Add(":parola", Password.Text);
             OracleDataReader lector = cmd.ExecuteReader();
-            /*
-            if (dt.Rows.Count > 0)
-            {
-                
-                for (int i = 0; i < dt.Rows.Count; i++)
-                {
-                    if (dt.Rows[i]["departament"].ToString() == "1")
-                    {
-                        this.Hide();
-                        CSapp C = new CSapp();
-                        C.ShowDialog();
-                    }
-                } *
-
-            }*/
+            
             if(lector.Read())
-            {
-                this.Hide();
-                CSapp C = new CSapp();
-                C.Show();
-                connection.Close();
+            {   //login pe roluri/departamente - aceeasi interfata pentru toti angajatii de pe un departament
+
+                if(lector["departament"].ToString() == "HR")
+                {
+                    this.Hide();
+                    CSapp C = new CSapp();
+                    C.Show();
+                    
+                }
+                if (lector["departament"].ToString() == "IT_Support")
+                {
+                    this.Hide();
+                    IT_Support it = new IT_Support(); 
+                    it.Show();
+
+                }
+                if (lector["departament"].ToString() == "Others")
+                {
+                    this.Hide();
+                    Other_Department other = new Other_Department();
+                    other.Show();
+
+                }
+
+               // userName.Clear();
+               // Password.Clear();
+
             }
+            
             else
             {
-                MessageBox.Show("error");
+                MessageBox.Show("Error: Username/password incorrect!!! Please try again.");
+                userName.Clear();
+                Password.Clear();
             }
+            connection.Close();
             lector.Close();
-
-
-          /*  if(( userName.Text=="admin") &&(Password.Text=="admin"))
-                {
-                this.Hide();
-                CSapp C= new CSapp();
-                C.ShowDialog();
             
-            }*/
-        }
+        } //close button login
 
         private void linkSingup_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
-            SignUp signUp = new SignUp();
+            NewEmployee signUp = new NewEmployee();
             signUp.Show();
                 
         }
@@ -89,6 +94,11 @@ namespace WindowsFormsApp1
         private void labelExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void userName_TextChanged(object sender, EventArgs e)
+        {
+           
         }
     }
 }

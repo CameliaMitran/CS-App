@@ -23,7 +23,7 @@ namespace WindowsFormsApp1
             
             TicketsForm1 ticketsForm1 = new TicketsForm1();
             ticketsForm1.TopLevel = false;
-            panelDesplay.Controls.Add(ticketsForm1);
+            panelDisplay.Controls.Add(ticketsForm1);
             ticketsForm1.BringToFront();
             ticketsForm1.Show();
 
@@ -35,7 +35,7 @@ namespace WindowsFormsApp1
            
             Upload upload = new Upload();
             upload.TopLevel = false;
-            panelDesplay.Controls.Add(upload);
+            panelDisplay.Controls.Add(upload);
             upload.BringToFront();
 
             upload.Show();
@@ -47,7 +47,7 @@ namespace WindowsFormsApp1
            
             Contact contact = new Contact();
             contact.TopLevel = false;
-            panelDesplay.Controls.Add(contact);
+            panelDisplay.Controls.Add(contact);
             contact.BringToFront();
             contact.Show();
 
@@ -57,7 +57,7 @@ namespace WindowsFormsApp1
         {
             CreateTickets createTickets = new CreateTickets();
             createTickets.TopLevel = false;
-            panelDesplay.Controls.Add(createTickets);
+            panelDisplay.Controls.Add(createTickets);
             createTickets.BringToFront();
             createTickets.Show();
         }
@@ -75,6 +75,23 @@ namespace WindowsFormsApp1
         private void panelMenu_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void BtnNewEmp_Click(object sender, EventArgs e)
+        {
+            NewEmployee new_employee = new NewEmployee();
+            new_employee.TopLevel = false;
+            panelDisplay.Controls.Add(new_employee);
+            new_employee.BringToFront();
+            new_employee.Show();
+
+        }
+
+        private void BtnLogout_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Login log = new Login();
+            log.Show();
         }
     }
 }

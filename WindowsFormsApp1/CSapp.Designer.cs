@@ -32,21 +32,24 @@
             this.btnUpload = new System.Windows.Forms.Button();
             this.btnContact = new System.Windows.Forms.Button();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.BtnNewEmp = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panelHeader = new System.Windows.Forms.Panel();
             this.labelExit = new System.Windows.Forms.Label();
-            this.panelDesplay = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panelDisplay = new System.Windows.Forms.Panel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.BtnLogout = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelHeader.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnTickets
             // 
-            this.btnTickets.Location = new System.Drawing.Point(51, 127);
+            this.btnTickets.Location = new System.Drawing.Point(51, 109);
             this.btnTickets.Name = "btnTickets";
-            this.btnTickets.Size = new System.Drawing.Size(75, 23);
+            this.btnTickets.Size = new System.Drawing.Size(96, 27);
             this.btnTickets.TabIndex = 0;
             this.btnTickets.Text = "Tickets";
             this.btnTickets.UseVisualStyleBackColor = true;
@@ -54,9 +57,9 @@
             // 
             // btnUpload
             // 
-            this.btnUpload.Location = new System.Drawing.Point(51, 185);
+            this.btnUpload.Location = new System.Drawing.Point(51, 158);
             this.btnUpload.Name = "btnUpload";
-            this.btnUpload.Size = new System.Drawing.Size(75, 23);
+            this.btnUpload.Size = new System.Drawing.Size(96, 27);
             this.btnUpload.TabIndex = 1;
             this.btnUpload.Text = "Upload";
             this.btnUpload.UseVisualStyleBackColor = true;
@@ -64,9 +67,9 @@
             // 
             // btnContact
             // 
-            this.btnContact.Location = new System.Drawing.Point(51, 250);
+            this.btnContact.Location = new System.Drawing.Point(51, 212);
             this.btnContact.Name = "btnContact";
-            this.btnContact.Size = new System.Drawing.Size(75, 23);
+            this.btnContact.Size = new System.Drawing.Size(96, 27);
             this.btnContact.TabIndex = 2;
             this.btnContact.Text = "Contact";
             this.btnContact.UseVisualStyleBackColor = true;
@@ -75,6 +78,8 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.panelMenu.Controls.Add(this.BtnLogout);
+            this.panelMenu.Controls.Add(this.BtnNewEmp);
             this.panelMenu.Controls.Add(this.btnCreate);
             this.panelMenu.Controls.Add(this.panelLogo);
             this.panelMenu.Controls.Add(this.btnTickets);
@@ -82,20 +87,30 @@
             this.panelMenu.Controls.Add(this.btnUpload);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(2);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(203, 450);
             this.panelMenu.TabIndex = 3;
             this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint);
             // 
+            // BtnNewEmp
+            // 
+            this.BtnNewEmp.Location = new System.Drawing.Point(51, 316);
+            this.BtnNewEmp.Name = "BtnNewEmp";
+            this.BtnNewEmp.Size = new System.Drawing.Size(96, 24);
+            this.BtnNewEmp.TabIndex = 4;
+            this.BtnNewEmp.Text = "New Employee";
+            this.BtnNewEmp.UseVisualStyleBackColor = true;
+            this.BtnNewEmp.Click += new System.EventHandler(this.BtnNewEmp_Click);
+            // 
             // btnCreate
             // 
-            this.btnCreate.Location = new System.Drawing.Point(51, 299);
-            this.btnCreate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCreate.Location = new System.Drawing.Point(51, 265);
+            this.btnCreate.Margin = new System.Windows.Forms.Padding(2);
             this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(75, 21);
+            this.btnCreate.Size = new System.Drawing.Size(96, 25);
             this.btnCreate.TabIndex = 3;
-            this.btnCreate.Text = "Create ";
+            this.btnCreate.Text = "Create Ticket";
             this.btnCreate.UseVisualStyleBackColor = true;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
@@ -105,7 +120,7 @@
             this.panelLogo.BackgroundImage = global::ContentShare.Properties.Resources.multimedia;
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelLogo.Margin = new System.Windows.Forms.Padding(2);
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(203, 65);
             this.panelLogo.TabIndex = 0;
@@ -114,9 +129,10 @@
             // 
             this.panelHeader.BackColor = System.Drawing.SystemColors.Control;
             this.panelHeader.Controls.Add(this.labelExit);
+            this.panelHeader.Controls.Add(this.textBox1);
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHeader.Location = new System.Drawing.Point(203, 0);
-            this.panelHeader.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelHeader.Margin = new System.Windows.Forms.Padding(2);
             this.panelHeader.Name = "panelHeader";
             this.panelHeader.Size = new System.Drawing.Size(597, 65);
             this.panelHeader.TabIndex = 4;
@@ -134,14 +150,38 @@
             this.labelExit.Text = "X";
             this.labelExit.Click += new System.EventHandler(this.labelExit_Click);
             // 
-            // panelDesplay
+            // textBox1
             // 
-            this.panelDesplay.BackColor = System.Drawing.Color.White;
-            this.panelDesplay.Location = new System.Drawing.Point(203, 65);
-            this.panelDesplay.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panelDesplay.Name = "panelDesplay";
-            this.panelDesplay.Size = new System.Drawing.Size(597, 385);
-            this.panelDesplay.TabIndex = 5;
+            this.textBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(0, 23);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(597, 24);
+            this.textBox1.TabIndex = 5;
+            this.textBox1.Text = "HR";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // panelDisplay
+            // 
+            this.panelDisplay.BackColor = System.Drawing.Color.White;
+            this.panelDisplay.Location = new System.Drawing.Point(203, 65);
+            this.panelDisplay.Margin = new System.Windows.Forms.Padding(2);
+            this.panelDisplay.Name = "panelDisplay";
+            this.panelDisplay.Size = new System.Drawing.Size(597, 385);
+            this.panelDisplay.TabIndex = 5;
+            // 
+            // BtnLogout
+            // 
+            this.BtnLogout.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.BtnLogout.Location = new System.Drawing.Point(11, 417);
+            this.BtnLogout.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnLogout.Name = "BtnLogout";
+            this.BtnLogout.Size = new System.Drawing.Size(55, 22);
+            this.BtnLogout.TabIndex = 5;
+            this.BtnLogout.Text = "Log Out";
+            this.BtnLogout.UseVisualStyleBackColor = true;
+            this.BtnLogout.Click += new System.EventHandler(this.BtnLogout_Click);
             // 
             // CSapp
             // 
@@ -149,7 +189,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panelDesplay);
+            this.Controls.Add(this.panelDisplay);
             this.Controls.Add(this.panelHeader);
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -171,9 +211,12 @@
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Panel panelHeader;
-        private System.Windows.Forms.Panel panelDesplay;
+        private System.Windows.Forms.Panel panelDisplay;
         private System.Windows.Forms.Button btnCreate;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Label labelExit;
+        private System.Windows.Forms.Button BtnNewEmp;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button BtnLogout;
     }
 }

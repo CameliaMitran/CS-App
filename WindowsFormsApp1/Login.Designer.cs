@@ -32,23 +32,23 @@
             this.userName = new System.Windows.Forms.TextBox();
             this.Password = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelExit = new System.Windows.Forms.Label();
-            this.linkSignup = new System.Windows.Forms.LinkLabel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // userName
             // 
             resources.ApplyResources(this.userName, "userName");
             this.userName.Name = "userName";
+            this.userName.TextChanged += new System.EventHandler(this.userName_TextChanged);
             // 
             // Password
             // 
@@ -63,13 +63,6 @@
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ContentShare.Properties.Resources.multimedia;
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
@@ -81,7 +74,6 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Control;
             this.panel2.Controls.Add(this.labelExit);
-            this.panel2.Controls.Add(this.linkSignup);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
@@ -97,13 +89,6 @@
             this.labelExit.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelExit.Name = "labelExit";
             this.labelExit.Click += new System.EventHandler(this.labelExit_Click);
-            // 
-            // linkSignup
-            // 
-            resources.ApplyResources(this.linkSignup, "linkSignup");
-            this.linkSignup.Name = "linkSignup";
-            this.linkSignup.TabStop = true;
-            this.linkSignup.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkSingup_LinkClicked);
             // 
             // label3
             // 
@@ -124,6 +109,13 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.label1.Name = "label1";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ContentShare.Properties.Resources.multimedia;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            // 
             // Login
             // 
             resources.ApplyResources(this, "$this");
@@ -134,11 +126,11 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -154,7 +146,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.LinkLabel linkSignup;
         private System.Windows.Forms.Label labelExit;
     }
 }

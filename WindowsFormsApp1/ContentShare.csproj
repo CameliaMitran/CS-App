@@ -72,6 +72,12 @@
     <Compile Include="Contact.Designer.cs">
       <DependentUpon>Contact.cs</DependentUpon>
     </Compile>
+    <Compile Include="CreateEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateEvent.Designer.cs">
+      <DependentUpon>CreateEvent.cs</DependentUpon>
+    </Compile>
     <Compile Include="CreateTickets.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,11 +90,23 @@
     <Compile Include="CSapp.Designer.cs">
       <DependentUpon>CSapp.cs</DependentUpon>
     </Compile>
+    <Compile Include="IT_Support.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IT_Support.Designer.cs">
+      <DependentUpon>IT_Support.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other_Department.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other_Department.Designer.cs">
+      <DependentUpon>Other_Department.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -97,11 +115,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="SignUp.cs">
+    <Compile Include="NewEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SignUp.Designer.cs">
-      <DependentUpon>SignUp.cs</DependentUpon>
+    <Compile Include="NewEmployee.Designer.cs">
+      <DependentUpon>NewEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="Tickets.cs">
       <SubType>Form</SubType>
@@ -118,22 +136,31 @@
     <EmbeddedResource Include="Contact.resx">
       <DependentUpon>Contact.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CreateEvent.resx">
+      <DependentUpon>CreateEvent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateTickets.resx">
       <DependentUpon>CreateTickets.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CSapp.resx">
       <DependentUpon>CSapp.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="IT_Support.resx">
+      <DependentUpon>IT_Support.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other_Department.resx">
+      <DependentUpon>Other_Department.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="SignUp.resx">
-      <DependentUpon>SignUp.cs</DependentUpon>
+    <EmbeddedResource Include="NewEmployee.resx">
+      <DependentUpon>NewEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tickets.resx">
       <DependentUpon>Tickets.cs</DependentUpon>

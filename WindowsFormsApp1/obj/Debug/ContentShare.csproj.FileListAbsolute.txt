@@ -35,7 +35,6 @@ C:\Users\Alexandru\Source\Repos\CameliaMitran\CS-App\WindowsFormsApp1\obj\Debug\
 C:\Users\Alexandru\Source\Repos\CameliaMitran\CS-App\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.CSapp.resources
 C:\Users\Alexandru\Source\Repos\CameliaMitran\CS-App\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Login.resources
 C:\Users\Alexandru\Source\Repos\CameliaMitran\CS-App\WindowsFormsApp1\obj\Debug\ContentShare.Properties.Resources.resources
-C:\Users\Alexandru\Source\Repos\CameliaMitran\CS-App\WindowsFormsApp1\obj\Debug\ContentShare.SignUp.resources
 C:\Users\Alexandru\Source\Repos\CameliaMitran\CS-App\WindowsFormsApp1\obj\Debug\ContentShare.TicketsForm1.resources
 C:\Users\Alexandru\Source\Repos\CameliaMitran\CS-App\WindowsFormsApp1\obj\Debug\ContentShare.Upload.resources
 C:\Users\Alexandru\Source\Repos\CameliaMitran\CS-App\WindowsFormsApp1\obj\Debug\ContentShare.csproj.GenerateResource.cache
@@ -45,3 +44,7 @@ C:\Users\Alexandru\Source\Repos\CameliaMitran\CS-App\WindowsFormsApp1\obj\Debug\
 C:\Users\Alexandru\source\repos\CameliaMitran\CS-App\WindowsFormsApp1\obj\Debug\ContentShare.csproj.CopyComplete
 C:\Users\Alexandru\source\repos\CameliaMitran\CS-App\WindowsFormsApp1\bin\Debug\Oracle.ManagedDataAccess.dll
 C:\Users\Alexandru\source\repos\CameliaMitran\CS-App\WindowsFormsApp1\bin\Debug\Oracle.DataAccess.dll
+C:\Users\Alexandru\source\repos\CameliaMitran\CS-App\WindowsFormsApp1\obj\Debug\ContentShare.NewEmployee.resources
+C:\Users\Alexandru\source\repos\CameliaMitran\CS-App\WindowsFormsApp1\obj\Debug\ContentShare.IT_Support.resources
+C:\Users\Alexandru\source\repos\CameliaMitran\CS-App\WindowsFormsApp1\obj\Debug\ContentShare.Other_Department.resources
+C:\Users\Alexandru\source\repos\CameliaMitran\CS-App\WindowsFormsApp1\obj\Debug\ContentShare.CreateEvent.resources
