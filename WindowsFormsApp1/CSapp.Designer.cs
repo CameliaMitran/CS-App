@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.btnTickets = new System.Windows.Forms.Button();
-            this.btnUpload = new System.Windows.Forms.Button();
-            this.btnContact = new System.Windows.Forms.Button();
+            this.btnCreateEvent = new System.Windows.Forms.Button();
+            this.btnEmployees = new System.Windows.Forms.Button();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.BtnLogout = new System.Windows.Forms.Button();
             this.BtnNewEmp = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
@@ -39,10 +40,12 @@
             this.labelExit = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panelDisplay = new System.Windows.Forms.Panel();
+            this.dataGridViewTickets = new System.Windows.Forms.DataGridView();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.BtnLogout = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelHeader.SuspendLayout();
+            this.panelDisplay.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTickets)).BeginInit();
             this.SuspendLayout();
             // 
             // btnTickets
@@ -55,25 +58,25 @@
             this.btnTickets.UseVisualStyleBackColor = true;
             this.btnTickets.Click += new System.EventHandler(this.btnTickets_Click);
             // 
-            // btnUpload
+            // btnCreateEvent
             // 
-            this.btnUpload.Location = new System.Drawing.Point(51, 158);
-            this.btnUpload.Name = "btnUpload";
-            this.btnUpload.Size = new System.Drawing.Size(96, 27);
-            this.btnUpload.TabIndex = 1;
-            this.btnUpload.Text = "Upload";
-            this.btnUpload.UseVisualStyleBackColor = true;
-            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
+            this.btnCreateEvent.Location = new System.Drawing.Point(51, 207);
+            this.btnCreateEvent.Name = "btnCreateEvent";
+            this.btnCreateEvent.Size = new System.Drawing.Size(96, 27);
+            this.btnCreateEvent.TabIndex = 1;
+            this.btnCreateEvent.Text = "Create Event";
+            this.btnCreateEvent.UseVisualStyleBackColor = true;
+            this.btnCreateEvent.Click += new System.EventHandler(this.btnCreateEvent_Click);
             // 
-            // btnContact
+            // btnEmployees
             // 
-            this.btnContact.Location = new System.Drawing.Point(51, 212);
-            this.btnContact.Name = "btnContact";
-            this.btnContact.Size = new System.Drawing.Size(96, 27);
-            this.btnContact.TabIndex = 2;
-            this.btnContact.Text = "Contact";
-            this.btnContact.UseVisualStyleBackColor = true;
-            this.btnContact.Click += new System.EventHandler(this.btnContact_Click);
+            this.btnEmployees.Location = new System.Drawing.Point(51, 260);
+            this.btnEmployees.Name = "btnEmployees";
+            this.btnEmployees.Size = new System.Drawing.Size(96, 27);
+            this.btnEmployees.TabIndex = 2;
+            this.btnEmployees.Text = "Employees";
+            this.btnEmployees.UseVisualStyleBackColor = true;
+            this.btnEmployees.Click += new System.EventHandler(this.btnEmployees_Click);
             // 
             // panelMenu
             // 
@@ -83,8 +86,8 @@
             this.panelMenu.Controls.Add(this.btnCreate);
             this.panelMenu.Controls.Add(this.panelLogo);
             this.panelMenu.Controls.Add(this.btnTickets);
-            this.panelMenu.Controls.Add(this.btnContact);
-            this.panelMenu.Controls.Add(this.btnUpload);
+            this.panelMenu.Controls.Add(this.btnEmployees);
+            this.panelMenu.Controls.Add(this.btnCreateEvent);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Margin = new System.Windows.Forms.Padding(2);
@@ -92,6 +95,18 @@
             this.panelMenu.Size = new System.Drawing.Size(203, 450);
             this.panelMenu.TabIndex = 3;
             this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint);
+            // 
+            // BtnLogout
+            // 
+            this.BtnLogout.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.BtnLogout.Location = new System.Drawing.Point(11, 417);
+            this.BtnLogout.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnLogout.Name = "BtnLogout";
+            this.BtnLogout.Size = new System.Drawing.Size(55, 22);
+            this.BtnLogout.TabIndex = 5;
+            this.BtnLogout.Text = "Log Out";
+            this.BtnLogout.UseVisualStyleBackColor = true;
+            this.BtnLogout.Click += new System.EventHandler(this.BtnLogout_Click);
             // 
             // BtnNewEmp
             // 
@@ -105,7 +120,7 @@
             // 
             // btnCreate
             // 
-            this.btnCreate.Location = new System.Drawing.Point(51, 265);
+            this.btnCreate.Location = new System.Drawing.Point(51, 155);
             this.btnCreate.Margin = new System.Windows.Forms.Padding(2);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(96, 25);
@@ -165,23 +180,22 @@
             // panelDisplay
             // 
             this.panelDisplay.BackColor = System.Drawing.Color.White;
+            this.panelDisplay.Controls.Add(this.dataGridViewTickets);
             this.panelDisplay.Location = new System.Drawing.Point(203, 65);
             this.panelDisplay.Margin = new System.Windows.Forms.Padding(2);
             this.panelDisplay.Name = "panelDisplay";
             this.panelDisplay.Size = new System.Drawing.Size(597, 385);
             this.panelDisplay.TabIndex = 5;
             // 
-            // BtnLogout
+            // dataGridViewTickets
             // 
-            this.BtnLogout.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.BtnLogout.Location = new System.Drawing.Point(11, 417);
-            this.BtnLogout.Margin = new System.Windows.Forms.Padding(2);
-            this.BtnLogout.Name = "BtnLogout";
-            this.BtnLogout.Size = new System.Drawing.Size(55, 22);
-            this.BtnLogout.TabIndex = 5;
-            this.BtnLogout.Text = "Log Out";
-            this.BtnLogout.UseVisualStyleBackColor = true;
-            this.BtnLogout.Click += new System.EventHandler(this.BtnLogout_Click);
+            this.dataGridViewTickets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewTickets.Location = new System.Drawing.Point(5, 5);
+            this.dataGridViewTickets.Name = "dataGridViewTickets";
+            this.dataGridViewTickets.Size = new System.Drawing.Size(588, 135);
+            this.dataGridViewTickets.TabIndex = 0;
+            this.dataGridViewTickets.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTickets_CellContentClick);
+            this.dataGridViewTickets.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewTickets_CellMouseDoubleClick);
             // 
             // CSapp
             // 
@@ -196,9 +210,12 @@
             this.Name = "CSapp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CSapp";
+            this.Load += new System.EventHandler(this.CSapp_Load);
             this.panelMenu.ResumeLayout(false);
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
+            this.panelDisplay.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTickets)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -206,8 +223,8 @@
         #endregion
 
         private System.Windows.Forms.Button btnTickets;
-        private System.Windows.Forms.Button btnUpload;
-        private System.Windows.Forms.Button btnContact;
+        private System.Windows.Forms.Button btnCreateEvent;
+        private System.Windows.Forms.Button btnEmployees;
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Panel panelHeader;
@@ -218,5 +235,6 @@
         private System.Windows.Forms.Button BtnNewEmp;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button BtnLogout;
+        private System.Windows.Forms.DataGridView dataGridViewTickets;
     }
 }

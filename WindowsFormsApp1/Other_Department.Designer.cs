@@ -29,16 +29,19 @@
         private void InitializeComponent()
         {
             this.panelMenuIT = new System.Windows.Forms.Panel();
+            this.BtnLogout = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
             this.btnTickets = new System.Windows.Forms.Button();
             this.PanelLogoIT = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelExit = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.BtnLogout = new System.Windows.Forms.Button();
+            this.panelDisplay = new System.Windows.Forms.Panel();
+            this.dataGridViewTickets = new System.Windows.Forms.DataGridView();
             this.panelMenuIT.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panelDisplay.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTickets)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenuIT
@@ -55,6 +58,18 @@
             this.panelMenuIT.Size = new System.Drawing.Size(203, 450);
             this.panelMenuIT.TabIndex = 1;
             // 
+            // BtnLogout
+            // 
+            this.BtnLogout.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.BtnLogout.Location = new System.Drawing.Point(11, 417);
+            this.BtnLogout.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnLogout.Name = "BtnLogout";
+            this.BtnLogout.Size = new System.Drawing.Size(55, 22);
+            this.BtnLogout.TabIndex = 6;
+            this.BtnLogout.Text = "Log Out";
+            this.BtnLogout.UseVisualStyleBackColor = true;
+            this.BtnLogout.Click += new System.EventHandler(this.BtnLogout_Click);
+            // 
             // btnCreate
             // 
             this.btnCreate.Location = new System.Drawing.Point(51, 165);
@@ -64,6 +79,7 @@
             this.btnCreate.TabIndex = 4;
             this.btnCreate.Text = "Create Ticket";
             this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // btnTickets
             // 
@@ -73,6 +89,7 @@
             this.btnTickets.TabIndex = 2;
             this.btnTickets.Text = "Tickets";
             this.btnTickets.UseVisualStyleBackColor = true;
+            this.btnTickets.Click += new System.EventHandler(this.btnTickets_Click);
             // 
             // PanelLogoIT
             // 
@@ -120,26 +137,25 @@
             this.textBox1.Text = "Other Departments";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // panel2
+            // panelDisplay
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(203, 65);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(597, 385);
-            this.panel2.TabIndex = 3;
+            this.panelDisplay.BackColor = System.Drawing.Color.White;
+            this.panelDisplay.Controls.Add(this.dataGridViewTickets);
+            this.panelDisplay.Location = new System.Drawing.Point(203, 65);
+            this.panelDisplay.Margin = new System.Windows.Forms.Padding(2);
+            this.panelDisplay.Name = "panelDisplay";
+            this.panelDisplay.Size = new System.Drawing.Size(597, 385);
+            this.panelDisplay.TabIndex = 3;
             // 
-            // BtnLogout
+            // dataGridViewTickets
             // 
-            this.BtnLogout.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.BtnLogout.Location = new System.Drawing.Point(11, 417);
-            this.BtnLogout.Margin = new System.Windows.Forms.Padding(2);
-            this.BtnLogout.Name = "BtnLogout";
-            this.BtnLogout.Size = new System.Drawing.Size(55, 22);
-            this.BtnLogout.TabIndex = 6;
-            this.BtnLogout.Text = "Log Out";
-            this.BtnLogout.UseVisualStyleBackColor = true;
-            this.BtnLogout.Click += new System.EventHandler(this.BtnLogout_Click);
+            this.dataGridViewTickets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewTickets.Location = new System.Drawing.Point(5, 5);
+            this.dataGridViewTickets.Name = "dataGridViewTickets";
+            this.dataGridViewTickets.Size = new System.Drawing.Size(588, 150);
+            this.dataGridViewTickets.TabIndex = 0;
+            this.dataGridViewTickets.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTickets_CellContentClick);
+            this.dataGridViewTickets.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewTickets_CellMouseDoubleClick);
             // 
             // Other_Department
             // 
@@ -147,15 +163,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panelDisplay);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelMenuIT);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Other_Department";
             this.Text = "Other_Department";
+            this.Load += new System.EventHandler(this.Other_Department_Load);
             this.panelMenuIT.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panelDisplay.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTickets)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -169,7 +188,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label labelExit;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panelDisplay;
         private System.Windows.Forms.Button BtnLogout;
+        private System.Windows.Forms.DataGridView dataGridViewTickets;
     }
 }

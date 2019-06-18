@@ -96,9 +96,14 @@ namespace WindowsFormsApp1
             this.Close();
         }
 
-        private void userName_TextChanged(object sender, EventArgs e)
+        private void userName_Click(object sender, EventArgs e)
         {
-           
+            userName.Clear();
+        }
+
+        private void Password_Click(object sender, EventArgs e)
+        {
+            Password.Clear();
         }
     }
 }

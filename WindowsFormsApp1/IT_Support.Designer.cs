@@ -32,11 +32,11 @@
             this.BtnLogout = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
             this.BtnTickets = new System.Windows.Forms.Button();
+            this.PanelLogoIT = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelExit = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panelDisplay = new System.Windows.Forms.Panel();
-            this.PanelLogoIT = new System.Windows.Forms.FlowLayoutPanel();
             this.dataGridViewTickets = new System.Windows.Forms.DataGridView();
             this.panelMenuIT.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -57,6 +57,7 @@
             this.panelMenuIT.Name = "panelMenuIT";
             this.panelMenuIT.Size = new System.Drawing.Size(203, 450);
             this.panelMenuIT.TabIndex = 0;
+            //this.panelMenuIT.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenuIT_Paint);
             // 
             // BtnLogout
             // 
@@ -90,6 +91,16 @@
             this.BtnTickets.Text = "Tickets";
             this.BtnTickets.UseVisualStyleBackColor = true;
             this.BtnTickets.Click += new System.EventHandler(this.BtnTickets_Click);
+            // 
+            // PanelLogoIT
+            // 
+            this.PanelLogoIT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.PanelLogoIT.BackgroundImage = global::ContentShare.Properties.Resources.multimedia;
+            this.PanelLogoIT.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PanelLogoIT.Location = new System.Drawing.Point(0, 0);
+            this.PanelLogoIT.Name = "PanelLogoIT";
+            this.PanelLogoIT.Size = new System.Drawing.Size(203, 65);
+            this.PanelLogoIT.TabIndex = 1;
             // 
             // panel1
             // 
@@ -137,23 +148,15 @@
             this.panelDisplay.Size = new System.Drawing.Size(597, 385);
             this.panelDisplay.TabIndex = 2;
             // 
-            // PanelLogoIT
-            // 
-            this.PanelLogoIT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.PanelLogoIT.BackgroundImage = global::ContentShare.Properties.Resources.multimedia;
-            this.PanelLogoIT.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelLogoIT.Location = new System.Drawing.Point(0, 0);
-            this.PanelLogoIT.Name = "PanelLogoIT";
-            this.PanelLogoIT.Size = new System.Drawing.Size(203, 65);
-            this.PanelLogoIT.TabIndex = 1;
-            // 
             // dataGridViewTickets
             // 
             this.dataGridViewTickets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewTickets.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewTickets.Location = new System.Drawing.Point(0, 35);
             this.dataGridViewTickets.Name = "dataGridViewTickets";
-            this.dataGridViewTickets.Size = new System.Drawing.Size(597, 374);
+            this.dataGridViewTickets.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewTickets.Size = new System.Drawing.Size(597, 176);
             this.dataGridViewTickets.TabIndex = 0;
+            this.dataGridViewTickets.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTickets_CellDoubleClick);
             // 
             // IT_Support
             // 
@@ -168,6 +171,7 @@
             this.Name = "IT_Support";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "IT_Support";
+            this.Load += new System.EventHandler(this.IT_Support_Load);
             this.panelMenuIT.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

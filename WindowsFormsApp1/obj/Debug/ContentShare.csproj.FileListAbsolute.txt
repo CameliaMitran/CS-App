@@ -36,7 +36,6 @@ C:\Users\Alexandru\Source\Repos\CameliaMitran\CS-App\WindowsFormsApp1\obj\Debug\
 C:\Users\Alexandru\Source\Repos\CameliaMitran\CS-App\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Login.resources
 C:\Users\Alexandru\Source\Repos\CameliaMitran\CS-App\WindowsFormsApp1\obj\Debug\ContentShare.Properties.Resources.resources
 C:\Users\Alexandru\Source\Repos\CameliaMitran\CS-App\WindowsFormsApp1\obj\Debug\ContentShare.TicketsForm1.resources
-C:\Users\Alexandru\Source\Repos\CameliaMitran\CS-App\WindowsFormsApp1\obj\Debug\ContentShare.Upload.resources
 C:\Users\Alexandru\Source\Repos\CameliaMitran\CS-App\WindowsFormsApp1\obj\Debug\ContentShare.csproj.GenerateResource.cache
 C:\Users\Alexandru\Source\Repos\CameliaMitran\CS-App\WindowsFormsApp1\obj\Debug\ContentShare.csproj.CoreCompileInputs.cache
 C:\Users\Alexandru\Source\Repos\CameliaMitran\CS-App\WindowsFormsApp1\obj\Debug\Content Share.exe
@@ -48,3 +47,4 @@ C:\Users\Alexandru\source\repos\CameliaMitran\CS-App\WindowsFormsApp1\obj\Debug\
 C:\Users\Alexandru\source\repos\CameliaMitran\CS-App\WindowsFormsApp1\obj\Debug\ContentShare.IT_Support.resources
 C:\Users\Alexandru\source\repos\CameliaMitran\CS-App\WindowsFormsApp1\obj\Debug\ContentShare.Other_Department.resources
 C:\Users\Alexandru\source\repos\CameliaMitran\CS-App\WindowsFormsApp1\obj\Debug\ContentShare.CreateEvent.resources
+C:\Users\Alexandru\source\repos\CameliaMitran\CS-App\WindowsFormsApp1\obj\Debug\ContentShare.Event.resources

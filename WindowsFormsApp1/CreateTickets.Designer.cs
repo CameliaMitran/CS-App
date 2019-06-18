@@ -57,6 +57,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textIDTicket = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.BtnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelEmpNameTicketIT
@@ -206,10 +207,18 @@
             resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
             // 
+            // BtnCancel
+            // 
+            resources.ApplyResources(this.BtnCancel, "BtnCancel");
+            this.BtnCancel.Name = "BtnCancel";
+            this.BtnCancel.UseVisualStyleBackColor = true;
+            this.BtnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
+            // 
             // CreateTickets
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             resources.ApplyResources(this, "$this");
+            this.Controls.Add(this.BtnCancel);
             this.Controls.Add(this.textIDTicket);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textNrSesizare);
@@ -275,5 +284,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textIDTicket;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button BtnCancel;
     }
 }

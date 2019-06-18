@@ -24,6 +24,7 @@ namespace ContentShare
         {
             try
             {
+                //inserare date, creare ticket nou
                 connection.Open();
                 OracleCommand cmd = new OracleCommand(
                      "insert all into ticket(id_ticket, angajat_creator, departament, descriere, departament_adresat, angajat_adresat, cost_aprox)" +
@@ -42,54 +43,25 @@ namespace ContentShare
                  cmd.Parameters.Add(":stare", comboStateIT.GetItemText(comboStateIT.SelectedItem));
                  cmd.Parameters.Add(":data_creare", dateTicketIT.Value.Date);
                 cmd.BindByName = true;
-                 cmd.ExecuteNonQuery(); 
-
-               /* OracleCommand cmd = new OracleCommand("insert into state(id_stare, stare) values (:id_stare, :stare)", connection);
-                cmd.Parameters.Add(":id_stare", textTicketEmpNameIT.Text);
-                cmd.Parameters.Add(":stare", textAsgnNameIT.Text);
-                cmd.ExecuteNonQuery(); */
-               
-
-
-
-
-
-                /*  connection.Open();
-                  OracleCommand cmd = new OracleCommand(" insert all into ContentShareDB.ticket ( id_ticket, angajat_creator, departament, angajat_adresat, departament_adresat, cost_aprox, descriere, comentarii ) " +
-                      " values ( @id_ticket, @angajat_creator, @departament, @angajat_adresat,  @departament_adresat, @cost_aprox, @descriere, @comentarii ) " +
-                      " into ContentShareDB.suport_it ( id_ticket, numar_sesizare, serviciu, stare, data_creare ) values ( @id_ticket, @numar_sesizare, @serviciu, @stare, @data_creare ) select * from dual ", connection);
-                  cmd.Parameters.Add("@id_ticket", textIDTicket.Text);
-                  cmd.Parameters.Add("@angajat_creator", textTicketEmpNameIT.Text);
-                  cmd.Parameters.Add("@departament", comboTicketDepIT.GetItemText(comboTicketDepIT.SelectedItem));
-                  cmd.Parameters.Add("@angajat_adresat", textAsgnNameIT.Text);
-                  cmd.Parameters.Add("@departament_adresat", comboAsgnDeptIT.GetItemText(comboAsgnDeptIT.SelectedItem));
-                  cmd.Parameters.Add("@cost_aprox", textCostIT.Text);
-                  cmd.Parameters.Add("@descriere", textDescrTicketIT.Text);
-                  cmd.Parameters.Add("@comentarii", richComTicketIT.Text);
-
-                  // OracleCommand cmd1 = new OracleCommand("insert into ContentShareDB.support_it('id_ticket', 'numar_sesizare', 'serviciu', 'stare', 'data_creare') values (@id_ticket, @numar_sesizare, @serviciu, @stare, @data_creare)", connection);
-                  //cmd1.Parameters.Add("@id_ticket", textIDTicket.Text);
-                  cmd.Parameters.Add("@numar_sesizare", textNrSesizare.Text);
-                  cmd.Parameters.Add("@serviciu", textService.Text);
-                  cmd.Parameters.Add("@stare", comboStateIT.GetItemText(comboStateIT.SelectedItem));
-                  cmd.Parameters.Add("@data_creare", dateTicketIT.Value.Date);
-
-                  cmd.ExecuteNonQuery();
-                  //cmd1.ExecuteNonQuery();
-                  connection.Close(); */
-
-
-
+                 cmd.ExecuteNonQuery();
+                cmd.Parameters.Clear();
+                MessageBox.Show("The ticket was created");
+                this.Hide();
             }
             catch(Exception ex )
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
-            connection.Close();
+            finally {
+                connection.Close();
+                
+            }
+           
         }
 
         private void CreateTickets_Load(object sender, EventArgs e)
         {
+            //incarcare date din baza de date in combobox
             connection.Open();
             OracleCommand cmd = new OracleCommand("select nume_departament from departament ", connection);
             OracleDataReader registru = cmd.ExecuteReader();            
@@ -105,9 +77,35 @@ namespace ContentShare
             {
                 comboStateIT.Items.Add(registru1["stare"].ToString());
             }
-
-
             connection.Close();
+        }
+
+        private void BtnCancel_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }
+/*  connection.Open();
+                 OracleCommand cmd = new OracleCommand(" insert all into ContentShareDB.ticket ( id_ticket, angajat_creator, departament, angajat_adresat, departament_adresat, cost_aprox, descriere, comentarii ) " +
+                     " values ( @id_ticket, @angajat_creator, @departament, @angajat_adresat,  @departament_adresat, @cost_aprox, @descriere, @comentarii ) " +
+                     " into ContentShareDB.suport_it ( id_ticket, numar_sesizare, serviciu, stare, data_creare ) values ( @id_ticket, @numar_sesizare, @serviciu, @stare, @data_creare ) select * from dual ", connection);
+                 cmd.Parameters.Add("@id_ticket", textIDTicket.Text);
+                 cmd.Parameters.Add("@angajat_creator", textTicketEmpNameIT.Text);
+                 cmd.Parameters.Add("@departament", comboTicketDepIT.GetItemText(comboTicketDepIT.SelectedItem));
+                 cmd.Parameters.Add("@angajat_adresat", textAsgnNameIT.Text);
+                 cmd.Parameters.Add("@departament_adresat", comboAsgnDeptIT.GetItemText(comboAsgnDeptIT.SelectedItem));
+                 cmd.Parameters.Add("@cost_aprox", textCostIT.Text);
+                 cmd.Parameters.Add("@descriere", textDescrTicketIT.Text);
+                 cmd.Parameters.Add("@comentarii", richComTicketIT.Text);
+
+                 // OracleCommand cmd1 = new OracleCommand("insert into ContentShareDB.support_it('id_ticket', 'numar_sesizare', 'serviciu', 'stare', 'data_creare') values (@id_ticket, @numar_sesizare, @serviciu, @stare, @data_creare)", connection);
+                 //cmd1.Parameters.Add("@id_ticket", textIDTicket.Text);
+                 cmd.Parameters.Add("@numar_sesizare", textNrSesizare.Text);
+                 cmd.Parameters.Add("@serviciu", textService.Text);
+                 cmd.Parameters.Add("@stare", comboStateIT.GetItemText(comboStateIT.SelectedItem));
+                 cmd.Parameters.Add("@data_creare", dateTicketIT.Value.Date);
+
+                 cmd.ExecuteNonQuery();
+                 //cmd1.ExecuteNonQuery();
+                 connection.Close(); */
