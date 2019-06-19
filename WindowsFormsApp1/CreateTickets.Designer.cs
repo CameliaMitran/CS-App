@@ -133,6 +133,7 @@
             // 
             resources.ApplyResources(this.textAsgnNameIT, "textAsgnNameIT");
             this.textAsgnNameIT.Name = "textAsgnNameIT";
+            this.textAsgnNameIT.TextChanged += new System.EventHandler(this.textAsgnNameIT_TextChanged);
             // 
             // labelAsgnEmpName
             // 

@@ -84,6 +84,11 @@ namespace ContentShare
         {
             this.Hide();
         }
+
+        private void textAsgnNameIT_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 /*  connection.Open();

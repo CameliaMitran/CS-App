@@ -38,6 +38,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panelDisplay = new System.Windows.Forms.Panel();
             this.dataGridViewTickets = new System.Windows.Forms.DataGridView();
+            this.Refresh = new System.Windows.Forms.Button();
             this.panelMenuIT.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelDisplay.SuspendLayout();
@@ -57,7 +58,6 @@
             this.panelMenuIT.Name = "panelMenuIT";
             this.panelMenuIT.Size = new System.Drawing.Size(203, 450);
             this.panelMenuIT.TabIndex = 0;
-            //this.panelMenuIT.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenuIT_Paint);
             // 
             // BtnLogout
             // 
@@ -141,6 +141,7 @@
             // panelDisplay
             // 
             this.panelDisplay.BackColor = System.Drawing.Color.White;
+            this.panelDisplay.Controls.Add(this.Refresh);
             this.panelDisplay.Controls.Add(this.dataGridViewTickets);
             this.panelDisplay.Location = new System.Drawing.Point(203, 65);
             this.panelDisplay.Margin = new System.Windows.Forms.Padding(2);
@@ -157,6 +158,16 @@
             this.dataGridViewTickets.Size = new System.Drawing.Size(597, 176);
             this.dataGridViewTickets.TabIndex = 0;
             this.dataGridViewTickets.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTickets_CellDoubleClick);
+            // 
+            // Refresh
+            // 
+            this.Refresh.Location = new System.Drawing.Point(304, 244);
+            this.Refresh.Name = "Refresh";
+            this.Refresh.Size = new System.Drawing.Size(75, 23);
+            this.Refresh.TabIndex = 1;
+            this.Refresh.Text = "Refresh";
+            this.Refresh.UseVisualStyleBackColor = true;
+            this.Refresh.Click += new System.EventHandler(this.Refresh_Click);
             // 
             // IT_Support
             // 
@@ -193,5 +204,6 @@
         private System.Windows.Forms.Panel panelDisplay;
         private System.Windows.Forms.Button BtnLogout;
         private System.Windows.Forms.DataGridView dataGridViewTickets;
+        private System.Windows.Forms.Button Refresh;
     }
 }

@@ -57,7 +57,7 @@ namespace ContentShare
             }
 
             connection.Close();
-
+           
             connection.Open();
             OracleCommand cmd = new OracleCommand("afisare_tickete", connection);
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
@@ -75,11 +75,15 @@ namespace ContentShare
         private void BtnUpdate_Click(object sender, EventArgs e)
         {
             connection.Open();
-            OracleCommand cmd = new OracleCommand("update ticket set cost_aprox = :cost_aprox", connection);
-            cmd.Parameters.Add(":cost_aprox", textCostIT.Text);
+            OracleCommand cmd = new OracleCommand("actualizare_suport_it", connection);
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            cmd.Parameters.Add("id_ticket", OracleDbType.Int32).Value = textIDTicket.Text;
+            cmd.Parameters.Add("stare", OracleDbType.Varchar2).Value = comboStateIT.GetItemText(comboStateIT.SelectedItem);
             cmd.ExecuteNonQuery();
-            OracleCommand cmd1 = new OracleCommand("update suport_it set stare =:stare", connection);
-            cmd1.Parameters.Add(":stare", comboStateIT.GetItemText(comboStateIT.SelectedItem));
+            OracleCommand cmd1 = new OracleCommand("actualizare_ticket", connection);
+            cmd1.CommandType = System.Data.CommandType.StoredProcedure;
+            cmd1.Parameters.Add("id_ticket", OracleDbType.Int32).Value = textIDTicket.Text;
+            cmd1.Parameters.Add("cost_aprox", OracleDbType.Int32).Value = textCostIT.Text;
             cmd1.ExecuteNonQuery();
             MessageBox.Show("The ticket was successfully updated :)");
             connection.Close();
@@ -121,5 +125,6 @@ namespace ContentShare
         {
         }
 
+       
     }
 }

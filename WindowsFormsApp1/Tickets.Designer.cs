@@ -68,6 +68,7 @@
             this.textIDTicket.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.textIDTicket.Size = new System.Drawing.Size(149, 20);
             this.textIDTicket.TabIndex = 59;
+//            this.textIDTicket.TextChanged += new System.EventHandler(this.textIDTicket_TextChanged);
             // 
             // label2
             // 

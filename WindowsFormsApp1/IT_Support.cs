@@ -16,7 +16,7 @@ namespace ContentShare
     public partial class IT_Support : Form
     {
         OracleConnection connection = new OracleConnection("DATA SOURCE=DESKTOP-Q1DI1IT:1521/XE;PERSIST SECURITY INFO=True; PASSWORD = cami; USER ID=CAMI");
-        IT_Support it = new IT_Support();
+        
         public IT_Support()
         {
             InitializeComponent();
@@ -40,18 +40,19 @@ namespace ContentShare
 
         private void BtnTickets_Click(object sender, EventArgs e)
         {
-           /* connection.Open();
-            OracleCommand cmd = new OracleCommand("afisare_tickete", connection);
-            cmd.CommandType = System.Data.CommandType.StoredProcedure;
-            cmd.Parameters.Add("registru", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
+            /* connection.Open();
+             OracleCommand cmd = new OracleCommand("afisare_tickete", connection);
+             cmd.CommandType = System.Data.CommandType.StoredProcedure;
+             cmd.Parameters.Add("registru", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
 
-            OracleDataAdapter adapter = new OracleDataAdapter();
-            adapter.SelectCommand = cmd;
-            DataTable dataTable = new DataTable();
-            adapter.Fill(dataTable);
-            dataGridViewTickets.DataSource = dataTable;
+             OracleDataAdapter adapter = new OracleDataAdapter();
+             adapter.SelectCommand = cmd;
+             DataTable dataTable = new DataTable();
+             adapter.Fill(dataTable);
+             dataGridViewTickets.DataSource = dataTable;
 
-            connection.Close();*/
+             connection.Close();*/
+            IT_Support it = new IT_Support();
             it.Show();
         }
     
@@ -89,6 +90,22 @@ namespace ContentShare
             panelDisplay.Controls.Add(ticket);
             ticket.BringToFront();
             ticket.Show();
+        }
+
+        private void Refresh_Click(object sender, EventArgs e)
+        {
+            connection.Open();
+            OracleCommand cmd = new OracleCommand("afisare_tickete", connection);
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            cmd.Parameters.Add("registru", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
+
+            OracleDataAdapter adapter = new OracleDataAdapter();
+            adapter.SelectCommand = cmd;
+            DataTable dataTable = new DataTable();
+            adapter.Fill(dataTable);
+            dataGridViewTickets.DataSource = dataTable;
+
+            connection.Close();
         }
     }
 }
