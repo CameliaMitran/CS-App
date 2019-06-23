@@ -168,6 +168,7 @@
             this.Controls.Add(this.panelMenuIT);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Other_Department";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Other_Department";
             this.Load += new System.EventHandler(this.Other_Department_Load);
             this.panelMenuIT.ResumeLayout(false);

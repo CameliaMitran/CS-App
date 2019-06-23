@@ -77,9 +77,9 @@ namespace ContentShare
             TicketsForm1 ticket = new TicketsForm1();
             ticket.textIDTicket.Text = this.dataGridViewTickets.CurrentRow.Cells[0].Value.ToString();
             ticket.textTicketEmpNameIT.Text = this.dataGridViewTickets.CurrentRow.Cells[1].Value.ToString();
-            ticket.comboTicketDepIT.Text = this.dataGridViewTickets.CurrentRow.Cells[2].Value.ToString();
+            ticket.textTicketDepIT.Text = this.dataGridViewTickets.CurrentRow.Cells[2].Value.ToString();
             ticket.textDescrTicketIT.Text = this.dataGridViewTickets.CurrentRow.Cells[3].Value.ToString();
-            ticket.comboAsgnDeptIT.Text = this.dataGridViewTickets.CurrentRow.Cells[4].Value.ToString();
+            ticket.textAsgnDeptIT.Text = this.dataGridViewTickets.CurrentRow.Cells[4].Value.ToString();
             ticket.textAsgnNameIT.Text = this.dataGridViewTickets.CurrentRow.Cells[5].Value.ToString();
             ticket.textCostIT.Text = this.dataGridViewTickets.CurrentRow.Cells[6].Value.ToString();
             ticket.textNrSesizare.Text = this.dataGridViewTickets.CurrentRow.Cells[7].Value.ToString();
@@ -106,6 +106,11 @@ namespace ContentShare
             dataGridViewTickets.DataSource = dataTable;
 
             connection.Close();
+        }
+
+        private void panelDisplay_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

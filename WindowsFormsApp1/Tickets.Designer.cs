@@ -40,9 +40,7 @@
             this.textCostIT = new System.Windows.Forms.TextBox();
             this.labelCost = new System.Windows.Forms.Label();
             this.labelState = new System.Windows.Forms.Label();
-            this.comboAsgnDeptIT = new System.Windows.Forms.ComboBox();
             this.comboStateIT = new System.Windows.Forms.ComboBox();
-            this.comboTicketDepIT = new System.Windows.Forms.ComboBox();
             this.labelAsgnDept = new System.Windows.Forms.Label();
             this.textAsgnNameIT = new System.Windows.Forms.TextBox();
             this.labelAsgnEmpName = new System.Windows.Forms.Label();
@@ -59,16 +57,18 @@
             this.textTicketEmpNameIT = new System.Windows.Forms.TextBox();
             this.labelEmpNameTicketIT = new System.Windows.Forms.Label();
             this.BtnCancel = new System.Windows.Forms.Button();
+            this.textTicketDepIT = new System.Windows.Forms.TextBox();
+            this.textAsgnDeptIT = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textIDTicket
             // 
+            this.textIDTicket.BackColor = System.Drawing.SystemColors.Control;
             this.textIDTicket.Location = new System.Drawing.Point(128, 58);
             this.textIDTicket.Name = "textIDTicket";
             this.textIDTicket.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.textIDTicket.Size = new System.Drawing.Size(149, 20);
             this.textIDTicket.TabIndex = 59;
-//            this.textIDTicket.TextChanged += new System.EventHandler(this.textIDTicket_TextChanged);
             // 
             // label2
             // 
@@ -85,6 +85,7 @@
             // 
             this.textNrSesizare.Location = new System.Drawing.Point(128, 32);
             this.textNrSesizare.Name = "textNrSesizare";
+            this.textNrSesizare.ReadOnly = true;
             this.textNrSesizare.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.textNrSesizare.Size = new System.Drawing.Size(149, 20);
             this.textNrSesizare.TabIndex = 57;
@@ -160,15 +161,6 @@
             this.labelState.TabIndex = 50;
             this.labelState.Text = "State";
             // 
-            // comboAsgnDeptIT
-            // 
-            this.comboAsgnDeptIT.FormattingEnabled = true;
-            this.comboAsgnDeptIT.Location = new System.Drawing.Point(128, 215);
-            this.comboAsgnDeptIT.Name = "comboAsgnDeptIT";
-            this.comboAsgnDeptIT.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.comboAsgnDeptIT.Size = new System.Drawing.Size(149, 21);
-            this.comboAsgnDeptIT.TabIndex = 49;
-            // 
             // comboStateIT
             // 
             this.comboStateIT.FormattingEnabled = true;
@@ -177,15 +169,6 @@
             this.comboStateIT.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.comboStateIT.Size = new System.Drawing.Size(149, 21);
             this.comboStateIT.TabIndex = 48;
-            // 
-            // comboTicketDepIT
-            // 
-            this.comboTicketDepIT.FormattingEnabled = true;
-            this.comboTicketDepIT.Location = new System.Drawing.Point(128, 127);
-            this.comboTicketDepIT.Name = "comboTicketDepIT";
-            this.comboTicketDepIT.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.comboTicketDepIT.Size = new System.Drawing.Size(149, 21);
-            this.comboTicketDepIT.TabIndex = 47;
             // 
             // labelAsgnDept
             // 
@@ -202,6 +185,7 @@
             // 
             this.textAsgnNameIT.Location = new System.Drawing.Point(128, 183);
             this.textAsgnNameIT.Name = "textAsgnNameIT";
+            this.textAsgnNameIT.ReadOnly = true;
             this.textAsgnNameIT.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.textAsgnNameIT.Size = new System.Drawing.Size(149, 20);
             this.textAsgnNameIT.TabIndex = 45;
@@ -264,6 +248,7 @@
             // 
             this.textDescrTicketIT.Location = new System.Drawing.Point(436, 184);
             this.textDescrTicketIT.Name = "textDescrTicketIT";
+            this.textDescrTicketIT.ReadOnly = true;
             this.textDescrTicketIT.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.textDescrTicketIT.Size = new System.Drawing.Size(149, 62);
             this.textDescrTicketIT.TabIndex = 39;
@@ -272,20 +257,22 @@
             // labelDescriptionIT
             // 
             this.labelDescriptionIT.AutoSize = true;
+            this.labelDescriptionIT.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDescriptionIT.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.labelDescriptionIT.Location = new System.Drawing.Point(360, 184);
             this.labelDescriptionIT.Name = "labelDescriptionIT";
-            this.labelDescriptionIT.Size = new System.Drawing.Size(60, 13);
+            this.labelDescriptionIT.Size = new System.Drawing.Size(71, 13);
             this.labelDescriptionIT.TabIndex = 38;
             this.labelDescriptionIT.Text = "Description";
             // 
             // labelDateTicket
             // 
             this.labelDateTicket.AutoSize = true;
+            this.labelDateTicket.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDateTicket.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.labelDateTicket.Location = new System.Drawing.Point(360, 83);
             this.labelDateTicket.Name = "labelDateTicket";
-            this.labelDateTicket.Size = new System.Drawing.Size(30, 13);
+            this.labelDateTicket.Size = new System.Drawing.Size(34, 13);
             this.labelDateTicket.TabIndex = 37;
             this.labelDateTicket.Text = "Date";
             // 
@@ -293,6 +280,7 @@
             // 
             this.textService.Location = new System.Drawing.Point(436, 28);
             this.textService.Name = "textService";
+            this.textService.ReadOnly = true;
             this.textService.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.textService.Size = new System.Drawing.Size(149, 20);
             this.textService.TabIndex = 36;
@@ -323,6 +311,7 @@
             // 
             this.textTicketEmpNameIT.Location = new System.Drawing.Point(128, 101);
             this.textTicketEmpNameIT.Name = "textTicketEmpNameIT";
+            this.textTicketEmpNameIT.ReadOnly = true;
             this.textTicketEmpNameIT.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.textTicketEmpNameIT.Size = new System.Drawing.Size(149, 20);
             this.textTicketEmpNameIT.TabIndex = 33;
@@ -348,11 +337,29 @@
             this.BtnCancel.UseVisualStyleBackColor = true;
             this.BtnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
+            // textTicketDepIT
+            // 
+            this.textTicketDepIT.Location = new System.Drawing.Point(128, 135);
+            this.textTicketDepIT.Name = "textTicketDepIT";
+            this.textTicketDepIT.ReadOnly = true;
+            this.textTicketDepIT.Size = new System.Drawing.Size(149, 20);
+            this.textTicketDepIT.TabIndex = 62;
+            // 
+            // textAsgnDeptIT
+            // 
+            this.textAsgnDeptIT.Location = new System.Drawing.Point(128, 215);
+            this.textAsgnDeptIT.Name = "textAsgnDeptIT";
+            this.textAsgnDeptIT.ReadOnly = true;
+            this.textAsgnDeptIT.Size = new System.Drawing.Size(149, 20);
+            this.textAsgnDeptIT.TabIndex = 63;
+            // 
             // TicketsForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(597, 374);
+            this.Controls.Add(this.textAsgnDeptIT);
+            this.Controls.Add(this.textTicketDepIT);
             this.Controls.Add(this.BtnCancel);
             this.Controls.Add(this.textIDTicket);
             this.Controls.Add(this.label2);
@@ -364,9 +371,7 @@
             this.Controls.Add(this.textCostIT);
             this.Controls.Add(this.labelCost);
             this.Controls.Add(this.labelState);
-            this.Controls.Add(this.comboAsgnDeptIT);
             this.Controls.Add(this.comboStateIT);
-            this.Controls.Add(this.comboTicketDepIT);
             this.Controls.Add(this.labelAsgnDept);
             this.Controls.Add(this.textAsgnNameIT);
             this.Controls.Add(this.labelAsgnEmpName);
@@ -413,13 +418,13 @@
         public System.Windows.Forms.TextBox textNrSesizare;
         public System.Windows.Forms.RichTextBox richComTicketIT;
         public System.Windows.Forms.TextBox textCostIT;
-        public System.Windows.Forms.ComboBox comboAsgnDeptIT;
         public System.Windows.Forms.ComboBox comboStateIT;
-        public System.Windows.Forms.ComboBox comboTicketDepIT;
         public System.Windows.Forms.TextBox textAsgnNameIT;
         public System.Windows.Forms.DateTimePicker dateTicketIT;
         public System.Windows.Forms.RichTextBox textDescrTicketIT;
         public System.Windows.Forms.TextBox textService;
         public System.Windows.Forms.TextBox textTicketEmpNameIT;
+        public System.Windows.Forms.TextBox textTicketDepIT;
+        public System.Windows.Forms.TextBox textAsgnDeptIT;
     }
 }

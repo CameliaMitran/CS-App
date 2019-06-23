@@ -42,8 +42,11 @@ namespace WindowsFormsApp1
 
         private void btnCreateEvent_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            //this.Hide();
             CreateEvent ev = new CreateEvent();
+            ev.TopLevel = false;
+            panelDisplay.Controls.Add(ev);
+            ev.BringToFront();
             ev.Show();  
         }
 
@@ -121,17 +124,28 @@ namespace WindowsFormsApp1
             adapter.Fill(dataTable);
             dataGridViewTickets.DataSource = dataTable;
 
+           /* OracleCommand cmd1 = new OracleCommand("afisare_eveniment", connection);
+            cmd1.CommandType = System.Data.CommandType.StoredProcedure;
+            cmd.Parameters.Add("registru", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
+
+            OracleDataAdapter d_adapt = new OracleDataAdapter();
+            d_adapt.SelectCommand = cmd1;
+            DataTable dt = new DataTable();
+            d_adapt.Fill(dt);
+            GridViewEvents.DataSource = dt; */
+
             connection.Close();
         }
 
         private void dataGridViewTickets_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            //la dublu click pe o inregistrare se afiseaza ticketul repsectiv
             TicketsForm1 ticket = new TicketsForm1();
             ticket.textIDTicket.Text = this.dataGridViewTickets.CurrentRow.Cells[0].Value.ToString();
             ticket.textTicketEmpNameIT.Text = this.dataGridViewTickets.CurrentRow.Cells[1].Value.ToString();
-            ticket.comboTicketDepIT.Text = this.dataGridViewTickets.CurrentRow.Cells[2].Value.ToString();
+            ticket.textTicketDepIT.Text = this.dataGridViewTickets.CurrentRow.Cells[2].Value.ToString();
             ticket.textDescrTicketIT.Text = this.dataGridViewTickets.CurrentRow.Cells[3].Value.ToString();
-            ticket.comboAsgnDeptIT.Text = this.dataGridViewTickets.CurrentRow.Cells[4].Value.ToString();
+            ticket.textAsgnNameIT.Text = this.dataGridViewTickets.CurrentRow.Cells[4].Value.ToString();
             ticket.textAsgnNameIT.Text = this.dataGridViewTickets.CurrentRow.Cells[5].Value.ToString();
             ticket.textCostIT.Text = this.dataGridViewTickets.CurrentRow.Cells[6].Value.ToString();
             ticket.textNrSesizare.Text = this.dataGridViewTickets.CurrentRow.Cells[7].Value.ToString();
@@ -148,5 +162,13 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void GridViewEvents_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            Event ev = new Event();
+            ev.textNumeEv.Text = this.GridViewEvents.CurrentRow.Cells[1].Value.ToString();
+        }
+
+       
     }
 }

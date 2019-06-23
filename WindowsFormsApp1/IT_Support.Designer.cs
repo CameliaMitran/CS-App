@@ -37,8 +37,8 @@
             this.labelExit = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panelDisplay = new System.Windows.Forms.Panel();
-            this.dataGridViewTickets = new System.Windows.Forms.DataGridView();
             this.Refresh = new System.Windows.Forms.Button();
+            this.dataGridViewTickets = new System.Windows.Forms.DataGridView();
             this.panelMenuIT.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelDisplay.SuspendLayout();
@@ -148,16 +148,7 @@
             this.panelDisplay.Name = "panelDisplay";
             this.panelDisplay.Size = new System.Drawing.Size(597, 385);
             this.panelDisplay.TabIndex = 2;
-            // 
-            // dataGridViewTickets
-            // 
-            this.dataGridViewTickets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewTickets.Location = new System.Drawing.Point(0, 35);
-            this.dataGridViewTickets.Name = "dataGridViewTickets";
-            this.dataGridViewTickets.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewTickets.Size = new System.Drawing.Size(597, 176);
-            this.dataGridViewTickets.TabIndex = 0;
-            this.dataGridViewTickets.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTickets_CellDoubleClick);
+            this.panelDisplay.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDisplay_Paint);
             // 
             // Refresh
             // 
@@ -168,6 +159,16 @@
             this.Refresh.Text = "Refresh";
             this.Refresh.UseVisualStyleBackColor = true;
             this.Refresh.Click += new System.EventHandler(this.Refresh_Click);
+            // 
+            // dataGridViewTickets
+            // 
+            this.dataGridViewTickets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewTickets.Location = new System.Drawing.Point(0, 35);
+            this.dataGridViewTickets.Name = "dataGridViewTickets";
+            this.dataGridViewTickets.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewTickets.Size = new System.Drawing.Size(597, 176);
+            this.dataGridViewTickets.TabIndex = 0;
+            this.dataGridViewTickets.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTickets_CellDoubleClick);
             // 
             // IT_Support
             // 

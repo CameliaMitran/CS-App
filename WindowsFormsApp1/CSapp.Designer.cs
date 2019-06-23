@@ -42,10 +42,12 @@
             this.panelDisplay = new System.Windows.Forms.Panel();
             this.dataGridViewTickets = new System.Windows.Forms.DataGridView();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.GridViewEvents = new System.Windows.Forms.DataGridView();
             this.panelMenu.SuspendLayout();
             this.panelHeader.SuspendLayout();
             this.panelDisplay.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTickets)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridViewEvents)).BeginInit();
             this.SuspendLayout();
             // 
             // btnTickets
@@ -180,15 +182,18 @@
             // panelDisplay
             // 
             this.panelDisplay.BackColor = System.Drawing.Color.White;
+            this.panelDisplay.Controls.Add(this.GridViewEvents);
             this.panelDisplay.Controls.Add(this.dataGridViewTickets);
             this.panelDisplay.Location = new System.Drawing.Point(203, 65);
             this.panelDisplay.Margin = new System.Windows.Forms.Padding(2);
             this.panelDisplay.Name = "panelDisplay";
             this.panelDisplay.Size = new System.Drawing.Size(597, 385);
             this.panelDisplay.TabIndex = 5;
+//            this.panelDisplay.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDisplay_Paint);
             // 
             // dataGridViewTickets
             // 
+            this.dataGridViewTickets.AllowUserToOrderColumns = true;
             this.dataGridViewTickets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewTickets.Location = new System.Drawing.Point(5, 5);
             this.dataGridViewTickets.Name = "dataGridViewTickets";
@@ -196,6 +201,16 @@
             this.dataGridViewTickets.TabIndex = 0;
             this.dataGridViewTickets.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTickets_CellContentClick);
             this.dataGridViewTickets.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewTickets_CellMouseDoubleClick);
+            // 
+            // GridViewEvents
+            // 
+            this.GridViewEvents.AllowUserToOrderColumns = true;
+            this.GridViewEvents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridViewEvents.Location = new System.Drawing.Point(297, 208);
+            this.GridViewEvents.Name = "GridViewEvents";
+            this.GridViewEvents.Size = new System.Drawing.Size(288, 150);
+            this.GridViewEvents.TabIndex = 1;
+            this.GridViewEvents.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.GridViewEvents_CellMouseDoubleClick);
             // 
             // CSapp
             // 
@@ -216,6 +231,7 @@
             this.panelHeader.PerformLayout();
             this.panelDisplay.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTickets)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridViewEvents)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -236,5 +252,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button BtnLogout;
         private System.Windows.Forms.DataGridView dataGridViewTickets;
+        private System.Windows.Forms.DataGridView GridViewEvents;
     }
 }
