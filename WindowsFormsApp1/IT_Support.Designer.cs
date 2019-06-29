@@ -39,10 +39,13 @@
             this.panelDisplay = new System.Windows.Forms.Panel();
             this.Refresh = new System.Windows.Forms.Button();
             this.dataGridViewTickets = new System.Windows.Forms.DataGridView();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panelMenuIT.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelDisplay.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTickets)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenuIT
@@ -56,7 +59,7 @@
             this.panelMenuIT.Location = new System.Drawing.Point(0, 0);
             this.panelMenuIT.Margin = new System.Windows.Forms.Padding(2);
             this.panelMenuIT.Name = "panelMenuIT";
-            this.panelMenuIT.Size = new System.Drawing.Size(203, 450);
+            this.panelMenuIT.Size = new System.Drawing.Size(153, 450);
             this.panelMenuIT.TabIndex = 0;
             // 
             // BtnLogout
@@ -73,7 +76,7 @@
             // 
             // btnCreate
             // 
-            this.btnCreate.Location = new System.Drawing.Point(51, 165);
+            this.btnCreate.Location = new System.Drawing.Point(21, 159);
             this.btnCreate.Margin = new System.Windows.Forms.Padding(2);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(96, 25);
@@ -84,7 +87,7 @@
             // 
             // BtnTickets
             // 
-            this.BtnTickets.Location = new System.Drawing.Point(51, 100);
+            this.BtnTickets.Location = new System.Drawing.Point(21, 94);
             this.BtnTickets.Name = "BtnTickets";
             this.BtnTickets.Size = new System.Drawing.Size(96, 27);
             this.BtnTickets.TabIndex = 2;
@@ -99,7 +102,7 @@
             this.PanelLogoIT.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelLogoIT.Location = new System.Drawing.Point(0, 0);
             this.PanelLogoIT.Name = "PanelLogoIT";
-            this.PanelLogoIT.Size = new System.Drawing.Size(203, 65);
+            this.PanelLogoIT.Size = new System.Drawing.Size(153, 65);
             this.PanelLogoIT.TabIndex = 1;
             // 
             // panel1
@@ -108,10 +111,10 @@
             this.panel1.Controls.Add(this.labelExit);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(203, 0);
+            this.panel1.Location = new System.Drawing.Point(153, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(597, 65);
+            this.panel1.Size = new System.Drawing.Size(647, 65);
             this.panel1.TabIndex = 1;
             // 
             // labelExit
@@ -141,18 +144,20 @@
             // panelDisplay
             // 
             this.panelDisplay.BackColor = System.Drawing.Color.White;
+            this.panelDisplay.Controls.Add(this.panel2);
+            this.panelDisplay.Controls.Add(this.dataGridView1);
             this.panelDisplay.Controls.Add(this.Refresh);
             this.panelDisplay.Controls.Add(this.dataGridViewTickets);
-            this.panelDisplay.Location = new System.Drawing.Point(203, 65);
+            this.panelDisplay.Location = new System.Drawing.Point(153, 65);
             this.panelDisplay.Margin = new System.Windows.Forms.Padding(2);
             this.panelDisplay.Name = "panelDisplay";
-            this.panelDisplay.Size = new System.Drawing.Size(597, 385);
+            this.panelDisplay.Size = new System.Drawing.Size(647, 385);
             this.panelDisplay.TabIndex = 2;
             this.panelDisplay.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDisplay_Paint);
             // 
             // Refresh
             // 
-            this.Refresh.Location = new System.Drawing.Point(304, 244);
+            this.Refresh.Location = new System.Drawing.Point(472, 175);
             this.Refresh.Name = "Refresh";
             this.Refresh.Size = new System.Drawing.Size(75, 23);
             this.Refresh.TabIndex = 1;
@@ -163,12 +168,29 @@
             // dataGridViewTickets
             // 
             this.dataGridViewTickets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewTickets.Location = new System.Drawing.Point(0, 35);
+            this.dataGridViewTickets.Location = new System.Drawing.Point(5, 14);
             this.dataGridViewTickets.Name = "dataGridViewTickets";
             this.dataGridViewTickets.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewTickets.Size = new System.Drawing.Size(597, 176);
+            this.dataGridViewTickets.Size = new System.Drawing.Size(597, 134);
             this.dataGridViewTickets.TabIndex = 0;
             this.dataGridViewTickets.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTickets_CellDoubleClick);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(335, 204);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(267, 169);
+            this.dataGridView1.TabIndex = 2;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.LightGray;
+            this.panel2.Location = new System.Drawing.Point(5, 154);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(307, 228);
+            this.panel2.TabIndex = 3;
             // 
             // IT_Support
             // 
@@ -189,6 +211,7 @@
             this.panel1.PerformLayout();
             this.panelDisplay.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTickets)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -206,5 +229,7 @@
         private System.Windows.Forms.Button BtnLogout;
         private System.Windows.Forms.DataGridView dataGridViewTickets;
         private System.Windows.Forms.Button Refresh;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Panel panel2;
     }
 }

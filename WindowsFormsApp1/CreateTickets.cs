@@ -26,13 +26,20 @@ namespace ContentShare
             {
                 //inserare date, creare ticket nou
                 connection.Open();
+                //se gaseste userul curent, pentru el se ia din baza de date numele si prenumele entru a fi completate in textboxul pentru angajat_creator
+                /*string username = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
+                OracleCommand cmd1 = new OracleCommand("select (nume_angajat||' '|| prenume_angajat) as angajat_creator from angajat where username = '" + username + "' ", connection);
+                cmd1.Parameters.Add(":angajat_creator", textTicketEmpNameIT.Text);
+                cmd1.ExecuteNonQuery();
+                cmd1.BindByName = true; */
+
                 OracleCommand cmd = new OracleCommand(
-                     "insert all into ticket(id_ticket, angajat_creator, departament, descriere, departament_adresat, angajat_adresat, cost_aprox)" +
-                     " values (:id_ticket, :angajat_creator, :departament, :descriere, :departament_adresat, :angajat_adresat, :cost_aprox) " +
+                     "insert all into ticket(id_ticket, departament, angajat_creator, descriere, departament_adresat, angajat_adresat, cost_aprox)" +
+                     " values (:id_ticket, :departament, :angajat_creator, :descriere, :departament_adresat, :angajat_adresat, :cost_aprox) " +
                      " into suport_it(id_ticket, numar_sesizare, serviciu, stare, data_creare) values (:id_ticket, :numar_sesizare, :serviciu, :stare, :data_creare)" +
                      " select :id_ticket, :angajat_creator, :departament, :descriere, :departament_adresat, :angajat_adresat, :cost_aprox, :numar_sesizare, :serviciu, :stare, :data_creare  from dual ", connection);
                  cmd.Parameters.Add(":id_ticket", textIDTicket.Text );
-                 cmd.Parameters.Add(":angajat_creator", textTicketEmpNameIT.Text );
+                 cmd.Parameters.Add(":angajat_creator", textTicketEmpNameIT.Text);
                  cmd.Parameters.Add(":departament", comboTicketDepIT.GetItemText(comboTicketDepIT.SelectedItem));
                  cmd.Parameters.Add(":descriere", textDescrTicketIT.Text );
                  cmd.Parameters.Add(":departament_adresat", comboAsgnDeptIT.GetItemText(comboAsgnDeptIT.SelectedItem) );
@@ -42,9 +49,9 @@ namespace ContentShare
                  cmd.Parameters.Add(":serviciu", textService.Text);
                  cmd.Parameters.Add(":stare", comboStateIT.GetItemText(comboStateIT.SelectedItem));
                  cmd.Parameters.Add(":data_creare", dateTicketIT.Value.Date);
-                cmd.BindByName = true;
+                 cmd.BindByName = true;
                  cmd.ExecuteNonQuery();
-                cmd.Parameters.Clear();
+                 cmd.Parameters.Clear();
                 MessageBox.Show("The ticket was created");
                 this.Hide();
             }
@@ -77,7 +84,14 @@ namespace ContentShare
             {
                 comboStateIT.Items.Add(registru1["stare"].ToString());
             }
-            connection.Close();
+
+            //se gaseste userul curent, pentru el se ia din baza de date numele si prenumele entru a fi completate in textboxul pentru angajat_creator
+           /* string username = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
+            OracleCommand cmd2 = new OracleCommand("select (nume_angajat||' '|| prenume_angajat) as angajat_creator from angajat where username = '" + username + "' ", connection);
+            cmd2.Parameters.Add(":angajat_creator", textTicketEmpNameIT.Text);
+            cmd2.ExecuteNonQuery();
+            cmd2.BindByName = true; */
+            connection.Close(); 
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)
@@ -86,6 +100,11 @@ namespace ContentShare
         }
 
         private void textAsgnNameIT_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboAsgnDeptIT_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

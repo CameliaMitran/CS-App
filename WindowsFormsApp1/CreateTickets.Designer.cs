@@ -112,7 +112,7 @@
             this.dateTicketIT.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             resources.ApplyResources(this.dateTicketIT, "dateTicketIT");
             this.dateTicketIT.Name = "dateTicketIT";
-            this.dateTicketIT.Value = new System.DateTime(2019, 6, 13, 0, 0, 0, 0);
+            this.dateTicketIT.Value = new System.DateTime(2019, 6, 25, 19, 13, 40, 0);
             // 
             // label4
             // 
@@ -157,6 +157,7 @@
             this.comboAsgnDeptIT.FormattingEnabled = true;
             resources.ApplyResources(this.comboAsgnDeptIT, "comboAsgnDeptIT");
             this.comboAsgnDeptIT.Name = "comboAsgnDeptIT";
+            this.comboAsgnDeptIT.SelectedIndexChanged += new System.EventHandler(this.comboAsgnDeptIT_SelectedIndexChanged);
             // 
             // labelState
             // 

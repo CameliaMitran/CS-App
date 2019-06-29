@@ -886,7 +886,7 @@
     <value>NoControl</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>333, 216</value>
+    <value>360, 216</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 13</value>

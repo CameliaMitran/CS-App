@@ -11,9 +11,9 @@ using ContentShare;
 using Oracle.DataAccess.Client;
 
 namespace WindowsFormsApp1
-{
+{    
     public partial class CSapp : Form
-    {
+    {       
         OracleConnection connection = new OracleConnection("DATA SOURCE=DESKTOP-Q1DI1IT:1521/XE;PERSIST SECURITY INFO=True; PASSWORD = cami; USER ID=CAMI");
         public CSapp()
         {
@@ -33,7 +33,7 @@ namespace WindowsFormsApp1
             DataTable dataTable = new DataTable();
             adapter.Fill(dataTable);
             dataGridViewTickets.DataSource = dataTable;
-
+        
             connection.Close();
 
             CSapp hr = new CSapp();
@@ -42,7 +42,6 @@ namespace WindowsFormsApp1
 
         private void btnCreateEvent_Click(object sender, EventArgs e)
         {
-            //this.Hide();
             CreateEvent ev = new CreateEvent();
             ev.TopLevel = false;
             panelDisplay.Controls.Add(ev);
@@ -56,17 +55,14 @@ namespace WindowsFormsApp1
             OracleCommand cmd = new OracleCommand("afisare_angajati", connection);
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
             cmd.Parameters.Add("registru", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
-
-            OracleDataAdapter adapter = new OracleDataAdapter();
-            adapter.SelectCommand = cmd;
-            DataTable dataTable = new DataTable();
-            adapter.Fill(dataTable);
-            dataGridViewTickets.DataSource = dataTable;
+          
+            OracleDataAdapter adapt = new OracleDataAdapter();
+            adapt.SelectCommand = cmd;
+            DataTable dataTbl = new DataTable();
+            adapt.Fill(dataTbl);
+            dataGridViewTickets.DataSource = dataTbl;
 
             connection.Close();
-
-            CSapp hr = new CSapp();
-            hr.Show();
         }
 
         private void btnCreate_Click(object sender, EventArgs e)
@@ -124,15 +120,19 @@ namespace WindowsFormsApp1
             adapter.Fill(dataTable);
             dataGridViewTickets.DataSource = dataTable;
 
-           /* OracleCommand cmd1 = new OracleCommand("afisare_eveniment", connection);
-            cmd1.CommandType = System.Data.CommandType.StoredProcedure;
-            cmd.Parameters.Add("registru", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
-
-            OracleDataAdapter d_adapt = new OracleDataAdapter();
-            d_adapt.SelectCommand = cmd1;
-            DataTable dt = new DataTable();
-            d_adapt.Fill(dt);
-            GridViewEvents.DataSource = dt; */
+            string data = "";
+            OracleCommand cmd1 = new OracleCommand("select data_eveniment from eveniment", connection);
+            OracleDataReader read = cmd1.ExecuteReader();
+            if (read.HasRows == true)
+            {
+                while (read.Read())
+                {
+                    data = read.GetValue(read.GetOrdinal("data_eveniment")).ToString();
+                    Calendar.AddBoldedDate(Convert.ToDateTime(data));
+                }
+            }
+            read.Close();
+            Calendar.UpdateBoldedDates();
 
             connection.Close();
         }
@@ -145,8 +145,8 @@ namespace WindowsFormsApp1
             ticket.textTicketEmpNameIT.Text = this.dataGridViewTickets.CurrentRow.Cells[1].Value.ToString();
             ticket.textTicketDepIT.Text = this.dataGridViewTickets.CurrentRow.Cells[2].Value.ToString();
             ticket.textDescrTicketIT.Text = this.dataGridViewTickets.CurrentRow.Cells[3].Value.ToString();
-            ticket.textAsgnNameIT.Text = this.dataGridViewTickets.CurrentRow.Cells[4].Value.ToString();
             ticket.textAsgnNameIT.Text = this.dataGridViewTickets.CurrentRow.Cells[5].Value.ToString();
+            ticket.textAsgnDeptIT.Text = this.dataGridViewTickets.CurrentRow.Cells[4].Value.ToString();
             ticket.textCostIT.Text = this.dataGridViewTickets.CurrentRow.Cells[6].Value.ToString();
             ticket.textNrSesizare.Text = this.dataGridViewTickets.CurrentRow.Cells[7].Value.ToString();
             ticket.textService.Text = this.dataGridViewTickets.CurrentRow.Cells[8].Value.ToString();
@@ -165,10 +165,74 @@ namespace WindowsFormsApp1
 
         private void GridViewEvents_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            Event ev = new Event();
-            ev.textNumeEv.Text = this.GridViewEvents.CurrentRow.Cells[1].Value.ToString();
+            /*Event ev = new Event();
+            ev.textNumeEv.Text = this.GridViewEvents.CurrentRow.Cells[1].Value.ToString();*/
         }
 
-       
+        private void panelDisplay_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void GridViewEmployees_VisibleChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnEvent_Click(object sender, EventArgs e)
+        {
+            connection.Open();
+            string data = "";
+            OracleCommand cmd = new OracleCommand("select data_eveniment from eveniment", connection);
+            OracleDataReader read = cmd.ExecuteReader();
+            if (read.HasRows == true)
+
+            {
+                while (read.Read())
+                {
+                    data = read.GetValue(read.GetOrdinal("data_eveniment")).ToString();
+
+                    Calendar.AddBoldedDate(Convert.ToDateTime(data));
+                }
+            }
+            read.Close();
+            Calendar.UpdateBoldedDates();
+            connection.Close();
+        
+        }
+
+        private void Calendar_DateSelected(object sender, DateRangeEventArgs e)
+        {//eroare, terbuie verificat
+            Event ev = new Event();
+            connection.Open();
+            
+            OracleCommand cmd = new OracleCommand("select nume_eveniment, locatie, descriere, data_eveniment from eveniment, ticket where eveniment.id_ticket = ticket.id_ticket ", connection);
+            OracleDataReader rd = cmd.ExecuteReader(); //eroare a non numeric...
+            ev.textDate.Text = this.Calendar.ToString();
+            while(rd.Read())
+            {//trebuie rectificat, fara if arata ultimul eveniment indiferent de data
+                
+                    ev.textNumeEv.Text = rd["nume_eveniment"].ToString();
+                    ev.textDescr.Text = rd["descriere"].ToString();
+                    ev.textAddressEv.Text = rd["locatie"].ToString();
+                
+                
+                //ev.textDate.Text = rd["data_eveniment"].ToString();
+            }
+            ev.Show();
+           
+            connection.Close();
+        }
+        /* while(rd.Read())
+            {//trebuie rectificat, fara if arata ultimul eveniment indiferent de data
+                if(rd["data_eveniment"].ToString() == this.Calendar.ToString())
+                {
+                    ev.textNumeEv.Text = rd["nume_eveniment"].ToString();
+        ev.textDescr.Text = rd["descriere"].ToString();
+        ev.textAddressEv.Text = rd["locatie"].ToString();*/
     }
+
+    //ev.textDate.Text = rd["data_eveniment"].ToString();
 }
+    
+

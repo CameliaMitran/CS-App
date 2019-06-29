@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace ContentShare
 {
+   
     public partial class Event : Form
     {
         public Event()
@@ -17,9 +18,32 @@ namespace ContentShare
             InitializeComponent();
         }
 
-        private void Upload_Load(object sender, EventArgs e)
+        public partial class FormState
+        {
+            public static Form PreviousPage;
+        }
+
+        private void Event_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void labelDate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateEvent_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            
+           // FormState.PreviousPage.Show();
+            this.Hide();
+            //FormState.PreviousPage = this;
         }
     }
 }

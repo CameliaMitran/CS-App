@@ -56,8 +56,8 @@ namespace ContentShare
            
             OracleCommand cmd = new OracleCommand("insert all into ticket(id_ticket, angajat_creator, departament, descriere, departament_adresat, angajat_adresat, cost_aprox)" +
                      " values (:id_ticket, :angajat_creator, :departament, :descriere, :departamente, :angajat_a, :cost_aprox) " +
-                     "into eveniment(id_ticket, numar_eveniment, nume_eveniment, data_eveniment, locatie) values (:id_ticket, :numar_eveniment, :nume_eveniment, :data_eveniment, :locatie)" +
-                     "select :id_ticket, :angajat_creator, :departament, :descriere, :departamente, :angajat_a, :cost_aprox, :numar_eveniment, :nume_eveniment, :data_eveniment, :locatie from dual ", connection);
+                     "into eveniment(id_ticket, nume_eveniment, data_eveniment, locatie) values (:id_ticket, :nume_eveniment, :data_eveniment, :locatie)" +
+                     "select :id_ticket, :angajat_creator, :departament, :descriere, :departamente, :angajat_a, :cost_aprox, :nume_eveniment, :data_eveniment, :locatie from dual ", connection);
 
             cmd.Parameters.Add(":id_ticket", textID.Text);
             cmd.Parameters.Add(":angajat_creator", textEmpName.Text);
@@ -66,7 +66,7 @@ namespace ContentShare
             cmd.Parameters.Add(":departamente", listAsgnDepartments.GetItemText(listAsgnDepartments.SelectedItem));
             cmd.Parameters.Add(":angajat_a", listAsgnEmp.GetItemText(listAsgnEmp.SelectedItem));
             cmd.Parameters.Add(":cost_aprox", textCost.Text);
-            cmd.Parameters.Add(":numar_eveniment", textEvNo.Text);
+           // cmd.Parameters.Add(":numar_eveniment", textEvNo.Text);
             cmd.Parameters.Add(":nume_eveniment", textNumeEv.Text);
             cmd.Parameters.Add(":data_eveniment", dateEvent.Value.Date);
             cmd.Parameters.Add(":locatie", textAddressEv.Text);
@@ -96,7 +96,6 @@ namespace ContentShare
                     {
                         listAsgnEmp.Items.Add(registru1["angajat"].ToString());
                     }
-
                 }                              
                 cmd1.BindByName = true;
                 connection.Close();

@@ -125,6 +125,9 @@ namespace ContentShare
         {
         }
 
-       
+        private void BtnRedirect_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

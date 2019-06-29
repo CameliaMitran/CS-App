@@ -42,12 +42,12 @@
             this.panelDisplay = new System.Windows.Forms.Panel();
             this.dataGridViewTickets = new System.Windows.Forms.DataGridView();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.GridViewEvents = new System.Windows.Forms.DataGridView();
+            this.Calendar = new System.Windows.Forms.MonthCalendar();
+            this.BtnEvent = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelHeader.SuspendLayout();
             this.panelDisplay.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTickets)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GridViewEvents)).BeginInit();
             this.SuspendLayout();
             // 
             // btnTickets
@@ -83,6 +83,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.panelMenu.Controls.Add(this.BtnEvent);
             this.panelMenu.Controls.Add(this.BtnLogout);
             this.panelMenu.Controls.Add(this.BtnNewEmp);
             this.panelMenu.Controls.Add(this.btnCreate);
@@ -182,14 +183,14 @@
             // panelDisplay
             // 
             this.panelDisplay.BackColor = System.Drawing.Color.White;
-            this.panelDisplay.Controls.Add(this.GridViewEvents);
+            this.panelDisplay.Controls.Add(this.Calendar);
             this.panelDisplay.Controls.Add(this.dataGridViewTickets);
             this.panelDisplay.Location = new System.Drawing.Point(203, 65);
             this.panelDisplay.Margin = new System.Windows.Forms.Padding(2);
             this.panelDisplay.Name = "panelDisplay";
             this.panelDisplay.Size = new System.Drawing.Size(597, 385);
             this.panelDisplay.TabIndex = 5;
-//            this.panelDisplay.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDisplay_Paint);
+            this.panelDisplay.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDisplay_Paint);
             // 
             // dataGridViewTickets
             // 
@@ -202,15 +203,24 @@
             this.dataGridViewTickets.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTickets_CellContentClick);
             this.dataGridViewTickets.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewTickets_CellMouseDoubleClick);
             // 
-            // GridViewEvents
+            // Calendar
             // 
-            this.GridViewEvents.AllowUserToOrderColumns = true;
-            this.GridViewEvents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridViewEvents.Location = new System.Drawing.Point(297, 208);
-            this.GridViewEvents.Name = "GridViewEvents";
-            this.GridViewEvents.Size = new System.Drawing.Size(288, 150);
-            this.GridViewEvents.TabIndex = 1;
-            this.GridViewEvents.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.GridViewEvents_CellMouseDoubleClick);
+            this.Calendar.Location = new System.Drawing.Point(352, 161);
+            this.Calendar.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
+            this.Calendar.MinDate = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
+            this.Calendar.Name = "Calendar";
+            this.Calendar.TabIndex = 1;
+            this.Calendar.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.Calendar_DateSelected);
+            // 
+            // BtnEvent
+            // 
+            this.BtnEvent.Location = new System.Drawing.Point(51, 365);
+            this.BtnEvent.Name = "BtnEvent";
+            this.BtnEvent.Size = new System.Drawing.Size(96, 23);
+            this.BtnEvent.TabIndex = 6;
+            this.BtnEvent.Text = "Events";
+            this.BtnEvent.UseVisualStyleBackColor = true;
+            this.BtnEvent.Click += new System.EventHandler(this.BtnEvent_Click);
             // 
             // CSapp
             // 
@@ -231,7 +241,6 @@
             this.panelHeader.PerformLayout();
             this.panelDisplay.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTickets)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GridViewEvents)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -252,6 +261,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button BtnLogout;
         private System.Windows.Forms.DataGridView dataGridViewTickets;
-        private System.Windows.Forms.DataGridView GridViewEvents;
+        private System.Windows.Forms.MonthCalendar Calendar;
+        private System.Windows.Forms.Button BtnEvent;
     }
 }
