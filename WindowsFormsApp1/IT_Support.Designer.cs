@@ -56,7 +56,7 @@
             this.panelMenuIT.Location = new System.Drawing.Point(0, 0);
             this.panelMenuIT.Margin = new System.Windows.Forms.Padding(2);
             this.panelMenuIT.Name = "panelMenuIT";
-            this.panelMenuIT.Size = new System.Drawing.Size(153, 450);
+            this.panelMenuIT.Size = new System.Drawing.Size(203, 450);
             this.panelMenuIT.TabIndex = 0;
             // 
             // BtnLogout
@@ -105,7 +105,7 @@
             this.PanelLogoIT.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelLogoIT.Location = new System.Drawing.Point(0, 0);
             this.PanelLogoIT.Name = "PanelLogoIT";
-            this.PanelLogoIT.Size = new System.Drawing.Size(153, 65);
+            this.PanelLogoIT.Size = new System.Drawing.Size(203, 65);
             this.PanelLogoIT.TabIndex = 1;
             // 
             // panel1
@@ -114,10 +114,10 @@
             this.panel1.Controls.Add(this.labelExit);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(153, 0);
+            this.panel1.Location = new System.Drawing.Point(203, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(647, 65);
+            this.panel1.Size = new System.Drawing.Size(597, 65);
             this.panel1.TabIndex = 1;
             // 
             // labelExit
@@ -133,6 +133,7 @@
             this.labelExit.Size = new System.Drawing.Size(27, 26);
             this.labelExit.TabIndex = 5;
             this.labelExit.Text = "X";
+            this.labelExit.Click += new System.EventHandler(this.labelExit_Click);
             // 
             // textBox1
             // 
@@ -152,26 +153,26 @@
             this.panelDisplay.BackColor = System.Drawing.Color.White;
             this.panelDisplay.Controls.Add(this.Calendar);
             this.panelDisplay.Controls.Add(this.dataGridViewTickets);
-            this.panelDisplay.Location = new System.Drawing.Point(153, 65);
+            this.panelDisplay.Location = new System.Drawing.Point(203, 65);
             this.panelDisplay.Margin = new System.Windows.Forms.Padding(2);
             this.panelDisplay.Name = "panelDisplay";
-            this.panelDisplay.Size = new System.Drawing.Size(647, 385);
+            this.panelDisplay.Size = new System.Drawing.Size(597, 385);
             this.panelDisplay.TabIndex = 2;
             this.panelDisplay.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDisplay_Paint);
             // 
             // dataGridViewTickets
             // 
             this.dataGridViewTickets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewTickets.Location = new System.Drawing.Point(5, 5);
+            this.dataGridViewTickets.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewTickets.Name = "dataGridViewTickets";
             this.dataGridViewTickets.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewTickets.Size = new System.Drawing.Size(639, 195);
+            this.dataGridViewTickets.Size = new System.Drawing.Size(597, 200);
             this.dataGridViewTickets.TabIndex = 0;
             this.dataGridViewTickets.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTickets_CellDoubleClick);
             // 
             // Calendar
             // 
-            this.Calendar.Location = new System.Drawing.Point(11, 212);
+            this.Calendar.Location = new System.Drawing.Point(11, 214);
             this.Calendar.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
             this.Calendar.MinDate = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
             this.Calendar.Name = "Calendar";

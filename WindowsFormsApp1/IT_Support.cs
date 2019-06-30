@@ -148,5 +148,10 @@ namespace ContentShare
 
             connection.Close();
         }
+
+        private void labelExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -38,6 +38,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panelDisplay = new System.Windows.Forms.Panel();
             this.dataGridViewTickets = new System.Windows.Forms.DataGridView();
+            this.Calendar = new System.Windows.Forms.MonthCalendar();
             this.panelMenuIT.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelDisplay.SuspendLayout();
@@ -135,6 +136,7 @@
             this.labelExit.Size = new System.Drawing.Size(27, 26);
             this.labelExit.TabIndex = 5;
             this.labelExit.Text = "X";
+            this.labelExit.Click += new System.EventHandler(this.labelExit_Click);
             // 
             // textBox1
             // 
@@ -152,6 +154,7 @@
             // panelDisplay
             // 
             this.panelDisplay.BackColor = System.Drawing.Color.White;
+            this.panelDisplay.Controls.Add(this.Calendar);
             this.panelDisplay.Controls.Add(this.dataGridViewTickets);
             this.panelDisplay.Location = new System.Drawing.Point(203, 65);
             this.panelDisplay.Margin = new System.Windows.Forms.Padding(2);
@@ -164,10 +167,19 @@
             this.dataGridViewTickets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewTickets.Location = new System.Drawing.Point(5, 5);
             this.dataGridViewTickets.Name = "dataGridViewTickets";
-            this.dataGridViewTickets.Size = new System.Drawing.Size(588, 150);
+            this.dataGridViewTickets.Size = new System.Drawing.Size(588, 197);
             this.dataGridViewTickets.TabIndex = 0;
             this.dataGridViewTickets.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTickets_CellContentClick);
             this.dataGridViewTickets.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewTickets_CellMouseDoubleClick);
+            // 
+            // Calendar
+            // 
+            this.Calendar.Location = new System.Drawing.Point(11, 214);
+            this.Calendar.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
+            this.Calendar.MinDate = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
+            this.Calendar.Name = "Calendar";
+            this.Calendar.TabIndex = 3;
+            this.Calendar.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.Calendar_DateChanged);
             // 
             // Other_Department
             // 
@@ -204,5 +216,6 @@
         private System.Windows.Forms.Panel panelDisplay;
         private System.Windows.Forms.Button BtnLogout;
         private System.Windows.Forms.DataGridView dataGridViewTickets;
+        private System.Windows.Forms.MonthCalendar Calendar;
     }
 }
