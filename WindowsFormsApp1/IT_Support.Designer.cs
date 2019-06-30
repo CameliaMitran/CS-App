@@ -37,14 +37,11 @@
             this.labelExit = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panelDisplay = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Refresh = new System.Windows.Forms.Button();
             this.dataGridViewTickets = new System.Windows.Forms.DataGridView();
+            this.Calendar = new System.Windows.Forms.MonthCalendar();
             this.panelMenuIT.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelDisplay.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTickets)).BeginInit();
             this.SuspendLayout();
             // 
@@ -153,9 +150,7 @@
             // panelDisplay
             // 
             this.panelDisplay.BackColor = System.Drawing.Color.White;
-            this.panelDisplay.Controls.Add(this.panel2);
-            this.panelDisplay.Controls.Add(this.dataGridView1);
-            this.panelDisplay.Controls.Add(this.Refresh);
+            this.panelDisplay.Controls.Add(this.Calendar);
             this.panelDisplay.Controls.Add(this.dataGridViewTickets);
             this.panelDisplay.Location = new System.Drawing.Point(153, 65);
             this.panelDisplay.Margin = new System.Windows.Forms.Padding(2);
@@ -164,42 +159,24 @@
             this.panelDisplay.TabIndex = 2;
             this.panelDisplay.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDisplay_Paint);
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.LightGray;
-            this.panel2.Location = new System.Drawing.Point(5, 154);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(307, 228);
-            this.panel2.TabIndex = 3;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(335, 204);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(267, 169);
-            this.dataGridView1.TabIndex = 2;
-            // 
-            // Refresh
-            // 
-            this.Refresh.Location = new System.Drawing.Point(472, 175);
-            this.Refresh.Name = "Refresh";
-            this.Refresh.Size = new System.Drawing.Size(75, 23);
-            this.Refresh.TabIndex = 1;
-            this.Refresh.Text = "Refresh";
-            this.Refresh.UseVisualStyleBackColor = true;
-            this.Refresh.Click += new System.EventHandler(this.Refresh_Click);
-            // 
             // dataGridViewTickets
             // 
             this.dataGridViewTickets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewTickets.Location = new System.Drawing.Point(5, 14);
+            this.dataGridViewTickets.Location = new System.Drawing.Point(5, 5);
             this.dataGridViewTickets.Name = "dataGridViewTickets";
             this.dataGridViewTickets.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewTickets.Size = new System.Drawing.Size(597, 134);
+            this.dataGridViewTickets.Size = new System.Drawing.Size(639, 195);
             this.dataGridViewTickets.TabIndex = 0;
             this.dataGridViewTickets.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTickets_CellDoubleClick);
+            // 
+            // Calendar
+            // 
+            this.Calendar.Location = new System.Drawing.Point(11, 212);
+            this.Calendar.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
+            this.Calendar.MinDate = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
+            this.Calendar.Name = "Calendar";
+            this.Calendar.TabIndex = 2;
+            this.Calendar.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.Calendar_DateChanged);
             // 
             // IT_Support
             // 
@@ -219,7 +196,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panelDisplay.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTickets)).EndInit();
             this.ResumeLayout(false);
 
@@ -237,8 +213,6 @@
         private System.Windows.Forms.Panel panelDisplay;
         private System.Windows.Forms.Button BtnLogout;
         private System.Windows.Forms.DataGridView dataGridViewTickets;
-        private System.Windows.Forms.Button Refresh;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.MonthCalendar Calendar;
     }
 }

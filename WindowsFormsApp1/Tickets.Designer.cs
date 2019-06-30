@@ -59,7 +59,7 @@
             this.BtnCancel = new System.Windows.Forms.Button();
             this.textTicketDepIT = new System.Windows.Forms.TextBox();
             this.textAsgnDeptIT = new System.Windows.Forms.TextBox();
-            this.BtnRedirect = new System.Windows.Forms.Button();
+            this.BtnForward = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textIDTicket
@@ -353,22 +353,22 @@
             this.textAsgnDeptIT.Size = new System.Drawing.Size(149, 20);
             this.textAsgnDeptIT.TabIndex = 63;
             // 
-            // BtnRedirect
+            // BtnForward
             // 
-            this.BtnRedirect.Location = new System.Drawing.Point(319, 339);
-            this.BtnRedirect.Name = "BtnRedirect";
-            this.BtnRedirect.Size = new System.Drawing.Size(75, 23);
-            this.BtnRedirect.TabIndex = 64;
-            this.BtnRedirect.Text = "Redirect";
-            this.BtnRedirect.UseVisualStyleBackColor = true;
-            this.BtnRedirect.Click += new System.EventHandler(this.BtnRedirect_Click);
+            this.BtnForward.Location = new System.Drawing.Point(319, 339);
+            this.BtnForward.Name = "BtnForward";
+            this.BtnForward.Size = new System.Drawing.Size(75, 23);
+            this.BtnForward.TabIndex = 64;
+            this.BtnForward.Text = "Forward";
+            this.BtnForward.UseVisualStyleBackColor = true;
+            this.BtnForward.Click += new System.EventHandler(this.BtnForward_Click);
             // 
             // TicketsForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(597, 374);
-            this.Controls.Add(this.BtnRedirect);
+            this.Controls.Add(this.BtnForward);
             this.Controls.Add(this.textAsgnDeptIT);
             this.Controls.Add(this.textTicketDepIT);
             this.Controls.Add(this.BtnCancel);
@@ -437,6 +437,6 @@
         public System.Windows.Forms.TextBox textTicketEmpNameIT;
         public System.Windows.Forms.TextBox textTicketDepIT;
         public System.Windows.Forms.TextBox textAsgnDeptIT;
-        private System.Windows.Forms.Button BtnRedirect;
+        private System.Windows.Forms.Button BtnForward;
     }
 }

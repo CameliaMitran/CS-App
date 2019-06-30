@@ -88,7 +88,8 @@ namespace ContentShare
                 //adauga angajati in listbox in functie de departamentul ales in listboxul pt dept
                 connection.Open();
                 string dept = listAsgnDepartments.SelectedItem.ToString();
-                OracleCommand cmd1 = new OracleCommand("select (nume_angajat||' '|| prenume_angajat) as angajat from angajat where departament = '" + dept + "' ", connection);
+                OracleCommand cmd1 = new OracleCommand("select (nume_angajat||' '|| prenume_angajat)" +
+                    " as angajat from angajat where departament = '" + dept + "' ", connection);
                 OracleDataReader registru1 = cmd1.ExecuteReader();
                 while (registru1.Read())
                 {

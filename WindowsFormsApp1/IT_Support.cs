@@ -69,6 +69,21 @@ namespace ContentShare
             adapter.Fill(dataTable);
             dataGridViewTickets.DataSource = dataTable;
 
+            string data = "";
+            OracleCommand cmd1 = new OracleCommand("select data_eveniment, departament_adresat from eveniment, ticket where" +
+                " ticket.id_ticket = eveniment.id_ticket and departament_adresat like '%IT%' ", connection);
+            OracleDataReader read = cmd1.ExecuteReader();
+            if (read.HasRows == true)
+            {
+                while (read.Read())
+                {
+                    data = read.GetValue(read.GetOrdinal("data_eveniment")).ToString();
+                    Calendar.AddBoldedDate(Convert.ToDateTime(data));
+                }
+            }
+            read.Close();
+            Calendar.UpdateBoldedDates();
+
             connection.Close();
         }
 
@@ -111,6 +126,27 @@ namespace ContentShare
         private void panelDisplay_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void Calendar_DateChanged(object sender, DateRangeEventArgs e)
+        {
+
+            Event ev = new Event();
+            connection.Open();
+
+            OracleCommand cmd = new OracleCommand("select nume_eveniment, locatie, descriere, data_eveniment from eveniment, ticket where eveniment.id_ticket = ticket.id_ticket ", connection);
+            OracleDataReader rd = cmd.ExecuteReader();
+            ev.textDate.Text = this.Calendar.SelectionRange.Start.ToShortDateString();
+            while (rd.Read())
+            {
+                ev.textNumeEv.Text = rd["nume_eveniment"].ToString();
+                ev.textDescr.Text = rd["descriere"].ToString();
+                ev.textAddressEv.Text = rd["locatie"].ToString();
+
+            }
+            ev.Show();
+
+            connection.Close();
         }
     }
 }

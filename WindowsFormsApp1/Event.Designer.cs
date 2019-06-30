@@ -65,6 +65,7 @@
             this.textAddressEv.Location = new System.Drawing.Point(70, 52);
             this.textAddressEv.Multiline = true;
             this.textAddressEv.Name = "textAddressEv";
+            this.textAddressEv.ReadOnly = true;
             this.textAddressEv.Size = new System.Drawing.Size(297, 40);
             this.textAddressEv.TabIndex = 13;
             // 
@@ -73,6 +74,7 @@
             this.textNumeEv.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textNumeEv.Location = new System.Drawing.Point(70, 8);
             this.textNumeEv.Name = "textNumeEv";
+            this.textNumeEv.ReadOnly = true;
             this.textNumeEv.Size = new System.Drawing.Size(297, 20);
             this.textNumeEv.TabIndex = 12;
             // 
@@ -92,6 +94,7 @@
             this.textDescr.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textDescr.Location = new System.Drawing.Point(50, 160);
             this.textDescr.Name = "textDescr";
+            this.textDescr.ReadOnly = true;
             this.textDescr.Size = new System.Drawing.Size(317, 79);
             this.textDescr.TabIndex = 24;
             this.textDescr.Text = "";
@@ -122,6 +125,7 @@
             this.textDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textDate.Location = new System.Drawing.Point(85, 98);
             this.textDate.Name = "textDate";
+            this.textDate.ReadOnly = true;
             this.textDate.Size = new System.Drawing.Size(282, 20);
             this.textDate.TabIndex = 26;
             // 

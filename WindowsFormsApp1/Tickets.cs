@@ -74,6 +74,7 @@ namespace ContentShare
 
         private void BtnUpdate_Click(object sender, EventArgs e)
         {
+            IT_Support it = new IT_Support();
             connection.Open();
             OracleCommand cmd = new OracleCommand("actualizare_suport_it", connection);
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
@@ -88,6 +89,7 @@ namespace ContentShare
             MessageBox.Show("The ticket was successfully updated :)");
             connection.Close();
             this.Hide();
+            it.Show();
         }
 /*
         private void BtnCharge_Click(object sender, EventArgs e)
@@ -125,9 +127,18 @@ namespace ContentShare
         {
         }
 
-        private void BtnRedirect_Click(object sender, EventArgs e)
+        private void BtnForward_Click(object sender, EventArgs e)
         {
-
+            IT_Support it = new IT_Support();
+            connection.Open();
+            OracleCommand cmd = new OracleCommand("redirect", connection);
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            cmd.Parameters.Add("id_ticket", OracleDbType.Int32).Value = textIDTicket.Text;
+            cmd.Parameters.Add("angajat_adresat", OracleDbType.Varchar2).Value = textAsgnNameIT.Text;
+            cmd.ExecuteNonQuery();
+            connection.Close();
+            this.Hide();
+            it.Show();
         }
     }
 }

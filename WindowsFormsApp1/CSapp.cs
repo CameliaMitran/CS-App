@@ -201,35 +201,54 @@ namespace WindowsFormsApp1
         
         }
 
-        private void Calendar_DateSelected(object sender, DateRangeEventArgs e)
+       /* private void Calendar_DateSelected(object sender, DateRangeEventArgs e)
         {//eroare, terbuie verificat
             Event ev = new Event();
             connection.Open();
             
             OracleCommand cmd = new OracleCommand("select nume_eveniment, locatie, descriere, data_eveniment from eveniment, ticket where eveniment.id_ticket = ticket.id_ticket ", connection);
-            OracleDataReader rd = cmd.ExecuteReader(); //eroare a non numeric...
-            ev.textDate.Text = this.Calendar.ToString();
+            OracleDataReader rd = cmd.ExecuteReader(); 
+            //display the selected date from monthcalendar to a textbox from other form
+            ev.textDate.Text = this.Calendar.SelectionRange.Start.ToShortDateString();
             while(rd.Read())
-            {//trebuie rectificat, fara if arata ultimul eveniment indiferent de data
-                
+            {//trebuie rectificat
+                if(rd.)
                     ev.textNumeEv.Text = rd["nume_eveniment"].ToString();
                     ev.textDescr.Text = rd["descriere"].ToString();
                     ev.textAddressEv.Text = rd["locatie"].ToString();
-                
-                
-                //ev.textDate.Text = rd["data_eveniment"].ToString();
+
             }
             ev.Show();
            
             connection.Close();
+        } */
+
+        private void Calendar_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            Event ev = new Event();
+            connection.Open();
+
+            OracleCommand cmd = new OracleCommand("select nume_eveniment, locatie, descriere, data_eveniment from eveniment, ticket where eveniment.id_ticket = ticket.id_ticket ", connection);
+            OracleDataReader rd = cmd.ExecuteReader();
+            ev.textDate.Text = this.Calendar.SelectionRange.Start.ToShortDateString();
+            while (rd.Read())
+            {
+                    ev.textNumeEv.Text = rd["nume_eveniment"].ToString();
+                    ev.textDescr.Text = rd["descriere"].ToString();
+                    ev.textAddressEv.Text = rd["locatie"].ToString();              
+
+            }
+            ev.Show();
+
+            connection.Close();
         }
         /* while(rd.Read())
-            {//trebuie rectificat, fara if arata ultimul eveniment indiferent de data
-                if(rd["data_eveniment"].ToString() == this.Calendar.ToString())
-                {
-                    ev.textNumeEv.Text = rd["nume_eveniment"].ToString();
-        ev.textDescr.Text = rd["descriere"].ToString();
-        ev.textAddressEv.Text = rd["locatie"].ToString();*/
+   {//trebuie rectificat, fara if arata ultimul eveniment indiferent de data
+       if(rd["data_eveniment"].ToString() == this.Calendar.ToString())
+       {
+           ev.textNumeEv.Text = rd["nume_eveniment"].ToString();
+ev.textDescr.Text = rd["descriere"].ToString();
+ev.textAddressEv.Text = rd["locatie"].ToString();*/
     }
 
     //ev.textDate.Text = rd["data_eveniment"].ToString();

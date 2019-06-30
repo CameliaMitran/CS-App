@@ -57,7 +57,10 @@ namespace ContentShare
         {
             try {
                 connection.Open();
-                OracleCommand cmd = new OracleCommand("insert into angajat(id_angajat, nume_angajat, prenume_angajat, CNP, adresa, telefon, email, functie, data_angajare, username, parola, departament, salariu) values (:id_angajat, :nume_angajat, :prenume_angajat, :CNP, :adresa, :telefon, :email, :functie, :data_angajare, :username, :parola, :departament, :salariu)", connection);
+                OracleCommand cmd = new OracleCommand("insert into angajat(id_angajat, nume_angajat, prenume_angajat, CNP," +
+                    " adresa, telefon, email, functie, data_angajare, username, parola, departament, salariu) " +
+                    "values (:id_angajat, :nume_angajat, :prenume_angajat, :CNP, :adresa, :telefon, :email, :functie," +
+                    " :data_angajare, :username, :parola, :departament, :salariu)", connection);
                 cmd.Parameters.Add(":id_angajat", textID.Text);
                 cmd.Parameters.Add(":nume_angajat", textNume.Text);
                 cmd.Parameters.Add(":prenume_angajat", textPrenume.Text);
