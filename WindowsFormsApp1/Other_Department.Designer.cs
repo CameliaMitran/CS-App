@@ -46,7 +46,7 @@
             // 
             // panelMenuIT
             // 
-            this.panelMenuIT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.panelMenuIT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(72)))), ((int)(((byte)(85)))));
             this.panelMenuIT.Controls.Add(this.BtnLogout);
             this.panelMenuIT.Controls.Add(this.btnCreate);
             this.panelMenuIT.Controls.Add(this.btnTickets);
@@ -60,40 +60,49 @@
             // 
             // BtnLogout
             // 
+            this.BtnLogout.BackColor = System.Drawing.Color.White;
+            this.BtnLogout.Cursor = System.Windows.Forms.Cursors.Default;
             this.BtnLogout.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.BtnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnLogout.Location = new System.Drawing.Point(11, 417);
             this.BtnLogout.Margin = new System.Windows.Forms.Padding(2);
             this.BtnLogout.Name = "BtnLogout";
             this.BtnLogout.Size = new System.Drawing.Size(55, 22);
             this.BtnLogout.TabIndex = 6;
             this.BtnLogout.Text = "Log Out";
-            this.BtnLogout.UseVisualStyleBackColor = true;
+            this.BtnLogout.UseVisualStyleBackColor = false;
             this.BtnLogout.Click += new System.EventHandler(this.BtnLogout_Click);
             // 
             // btnCreate
             // 
+            this.btnCreate.BackColor = System.Drawing.Color.White;
+            this.btnCreate.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreate.Location = new System.Drawing.Point(51, 165);
             this.btnCreate.Margin = new System.Windows.Forms.Padding(2);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(96, 25);
             this.btnCreate.TabIndex = 4;
             this.btnCreate.Text = "Create Ticket";
-            this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.UseVisualStyleBackColor = false;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // btnTickets
             // 
+            this.btnTickets.BackColor = System.Drawing.Color.White;
+            this.btnTickets.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnTickets.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTickets.Location = new System.Drawing.Point(51, 100);
             this.btnTickets.Name = "btnTickets";
             this.btnTickets.Size = new System.Drawing.Size(96, 27);
             this.btnTickets.TabIndex = 2;
             this.btnTickets.Text = "Tickets";
-            this.btnTickets.UseVisualStyleBackColor = true;
+            this.btnTickets.UseVisualStyleBackColor = false;
             this.btnTickets.Click += new System.EventHandler(this.btnTickets_Click);
             // 
             // PanelLogoIT
             // 
-            this.PanelLogoIT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.PanelLogoIT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(170)))), ((int)(((byte)(51)))));
             this.PanelLogoIT.BackgroundImage = global::ContentShare.Properties.Resources.multimedia;
             this.PanelLogoIT.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelLogoIT.Location = new System.Drawing.Point(0, 0);
@@ -103,7 +112,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(170)))), ((int)(((byte)(51)))));
             this.panel1.Controls.Add(this.labelExit);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -116,9 +125,11 @@
             // labelExit
             // 
             this.labelExit.AutoSize = true;
+            this.labelExit.BackColor = System.Drawing.Color.White;
             this.labelExit.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelExit.Location = new System.Drawing.Point(566, 6);
+            this.labelExit.ForeColor = System.Drawing.Color.Red;
+            this.labelExit.Location = new System.Drawing.Point(566, 18);
             this.labelExit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelExit.Name = "labelExit";
             this.labelExit.Size = new System.Drawing.Size(27, 26);
@@ -127,9 +138,10 @@
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(170)))), ((int)(((byte)(51)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.White;
             this.textBox1.Location = new System.Drawing.Point(0, 21);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(597, 24);
